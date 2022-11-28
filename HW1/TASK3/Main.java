@@ -15,9 +15,11 @@ public class Main {
             countryArray[i].setAmountOfMinutes(Integer.parseInt(br.readLine()));
         }
 
+        double totalCalls = 0;
         for(int i = 0; i < countryArray.length; i++) {
             System.out.println("Call for "+i+" country: "+countryArray[i].getCallAmount());
+            totalCalls += countryArray[i].getCallAmount();
         }
 
-        System.out.println("Total: "+(countryArray[0].getCallAmount()+countryArray[1].getCallAmount()+countryArray[2].getCallAmount()));
+        System.out.println("Total: "+totalCalls);
     }}
