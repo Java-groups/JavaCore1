@@ -31,8 +31,8 @@ public class Main {
 		
 		
 		System.out.println("First call price is: " + (firstcall * firstcalltime));
-		System.out.println("First call price is: " + (secondcall * secondcalltime));
-		System.out.println("First call price is: " + (thirdcall * thirdcalltime));
+		System.out.println("Second call price is: " + (secondcall * secondcalltime));
+		System.out.println("Third call price is: " + (thirdcall * thirdcalltime));
 
 	}
 
