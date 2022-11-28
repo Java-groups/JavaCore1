@@ -13,6 +13,7 @@ public class Home_Task_1
 		
 		System.out.println("\t \t HOME WORK 1 TASK 1");
 		System.out.println("Flower bed is shaped like a circle. For calculating perimeter and area, please enter the radius: ");
+		//do...while cycle check if entered value is numeric or not, if not then can exit without entering or enter numeric value 
 		do 
 		{
 			try 
