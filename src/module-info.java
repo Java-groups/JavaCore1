@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author iviaz
+ *
+ */
+module JavaCoreComplete {
+}
