@@ -1,7 +1,7 @@
 *.ear
 *.nar
 hs_err_pid*
-
+echo "idea","_pycache_"gitignore
 ##############################
 ## Maven
 ##############################
