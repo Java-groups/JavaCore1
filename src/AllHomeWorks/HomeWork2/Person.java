@@ -9,13 +9,16 @@ public class Person {
     private String firstName;
     private String lastName;
     private int birthYear;
+    private int number;
 
     public Person() {}
     public Person(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
+public void setNumber(int number){
+        this.number = number;
+}
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -27,7 +30,9 @@ public class Person {
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
     }
-
+public int getNumber(){
+    return number;
+}
     public String getFirstName() {
         return firstName;
     }
@@ -89,6 +94,7 @@ public class Person {
     }
 
     public void output() {
+        System.out.println("Person #" + this.getNumber());
         System.out.println("Firstname: " + this.getFirstName());
         System.out.println("Lastname: " + this.getLastName());
         System.out.println("BirthYear: " + this.getBirthYear());

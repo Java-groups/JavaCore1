@@ -5,12 +5,18 @@ import java.util.ArrayList;
 
 public class HomeWork2 {
     public static void doTask() throws IOException {
-    for (int i=0; i<5; i++) {
+        ArrayList<Person> personList = new ArrayList<>();
+
+        for (int i=0; i<5; i++) {
         System.out.println("---------------------------------------------");
-        System.out.println("Person #" + i);
+        System.out.println("Person #" + (i+1));
         Person pers = new Person();
+        pers.setNumber(i+1);
         pers.input();
-        pers.output();
+        personList.add(pers);
     }
+        for (Person person: personList) {
+            person.output();
+        }
     }
 }
