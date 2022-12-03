@@ -3,6 +3,7 @@ package AllHomeWorks.HomeWork2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Calendar;
 
 public class Person {
     private String firstName;
@@ -45,11 +46,25 @@ public class Person {
     public void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter Firstname:");
-        String firstName = br.readLine();
+        String firstName = "";
+        firstName = br.readLine();
+
+        while (firstName.isEmpty()) {
+            System.out.println("Firstname cannot be empty. Enter Firstname:");
+            firstName = br.readLine();
+        }
         this.setFirstName(firstName);
 
+
         System.out.println("Enter LastName:");
-        String lastName = br.readLine();
+        String lastName = "";
+        lastName = br.readLine();
+
+        while (lastName.isEmpty()){
+            System.out.println("Lastname cannot be empty. Enter Lastname:");
+            System.out.println("Enter LastName:");
+            lastName = br.readLine();
+        }
         this.setLastName(lastName);
 
         System.out.println("Enter BirthdayYear:");
@@ -59,8 +74,9 @@ public class Person {
         } catch (NumberFormatException e) {
 
         }
-        // TODO: replace 2022 with date function for retrieval current year
-        while (birthYear > 2022 || birthYear < 0) {
+
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        while (birthYear > currentYear || birthYear < 0) {
             System.out.println("Please input right year!");
             try {
                 birthYear = Integer.parseInt(br.readLine());
@@ -77,12 +93,13 @@ public class Person {
         System.out.println("BirthYear: " + this.getBirthYear());
         System.out.println("Age: " + this.getAge());
     }
-   public void changeName(String firstName, String lastName){
-if (!(firstName.isEmpty())){
-    this.setFirstName(firstName);
-}
-if (!(lastName.isEmpty())){
-    this.setLastName(lastName);
-}
-   }
+
+    public void changeName(String firstName, String lastName) {
+        if (!(firstName.isEmpty())) {
+            this.setFirstName(firstName);
+        }
+        if (!(lastName.isEmpty())) {
+            this.setLastName(lastName);
+        }
+    }
 }
