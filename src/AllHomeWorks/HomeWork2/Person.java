@@ -41,7 +41,8 @@ public class Person {
     }
 
     public int getAge(){
-        return (2022 - this.birthYear);
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        return (currentYear - this.birthYear);
     }
     public void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
