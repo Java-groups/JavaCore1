@@ -18,8 +18,6 @@ public class Main {
             System.out.print("Hours: ");
             double hours = parseDouble(br.readLine());
             employees[i] = new Employee(name, rate, hours);
-        }
-        for (int i = 0; i < employees.length; i++) {
             employees[i].dispatchAmountOfSalary();
         }
         System.out.println("Total salary: " + Employee.totalSum);
