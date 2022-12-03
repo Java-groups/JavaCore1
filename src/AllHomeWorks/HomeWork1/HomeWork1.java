@@ -7,14 +7,19 @@ import java.io.InputStreamReader;
 public class HomeWork1 {
     public static void doSelectTask() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int x;
+        int x = -1;
         do {
             System.out.println();
             System.out.println("Please, put the number of task:");
             System.out.println("1. Calculate an area and perimeter.");
             System.out.println("2. SoftCollection");
             System.out.println("3. Calculate how many phone calls cost.");
-            x = Integer.parseInt(br.readLine());
+
+            try {
+                x = Integer.parseInt(br.readLine());
+            } catch (NumberFormatException e) {
+
+            }
 
             switch (x) {
                 case 1 -> FlowerBedParametersTask.doTask();
