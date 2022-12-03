@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Home_Task_1 
 {
+
 	//method that check if entered value is numeric or not, if not then can exit without entering or enter numeric value
 	private static double checkInputFormatOrExit(Scanner in_stream)
 	{
