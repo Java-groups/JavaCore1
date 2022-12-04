@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a843a24-7586-4ed0-b09b-dac48990089d" name="Default Changelist" comment="revise gitignore" />
+    <list default="true" id="4a843a24-7586-4ed0-b09b-dac48990089d" name="Default Changelist" comment="add HW2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,13 +129,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669833786958</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add HW2">
+      <created>1670188838134</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670188838134</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add HW2">
+      <created>1670188894043</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670188894043</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change direction of gitignore" />
     <MESSAGE value="revise gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="revise gitignore" />
+    <MESSAGE value="add HW2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add HW2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
