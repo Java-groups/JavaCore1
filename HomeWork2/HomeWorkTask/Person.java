@@ -1,4 +1,3 @@
-import java.time.Year;
 import java.time.YearMonth;
 import java.util.Scanner;
 
@@ -31,7 +30,6 @@ public class Person {
         this.birthYear = birtYear;
     }
 
-    Scanner input = new Scanner(System.in);
 
     public Person(String firstName,String secondName,int birtYear){
         this.firstName = firstName;
@@ -50,18 +48,17 @@ public class Person {
 
 
     public static int getAge(){
-        int year = YearMonth.now().getYear();
-        return  year-birthYear;
+        return YearMonth.now().getYear()-birthYear;
     }
 
 
-    public void input(){
+    public void input(Scanner inputs){
         System.out.println("Enter your first name = ");
-        this.firstName = input.nextLine();
+        this.firstName = inputs.nextLine();
         System.out.println("Enter your second name = ");
-        this.secondName = input.nextLine();
+        this.secondName = inputs.nextLine();
         System.out.println("Enter your birth = ");
-        this.birthYear = input.nextInt();
+        this.birthYear = inputs.nextInt();
     }
 
     public String output(){
