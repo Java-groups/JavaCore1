@@ -72,7 +72,5 @@ nb-configuration.xml
 .code-workspace
 *.class
 
-##############################
-## OS X
-##############################
+
 .DS_Store
