@@ -2,7 +2,7 @@ package com.edu.practicaltask2.realisation;
 
 import com.edu.practicaltask2.employee.Employee;
 
-public class EmployeeCreation {
+public class EmployeeStarter {
     public static void main(String[] args) {
 
         Employee s1 = new Employee();
