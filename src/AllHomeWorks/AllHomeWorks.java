@@ -2,6 +2,7 @@ package AllHomeWorks;
 import AllHomeWorks.HomeWork1.HomeWork1;
 import AllHomeWorks.HomeWork2.HomeWork2;
 import AllHomeWorks.HomeWork2Practical.HomeWork2Practical;
+import AllHomeWorks.HomeWork3Practical.HomeWork3Practical;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +19,10 @@ public class AllHomeWorks {
                 System.out.println("1. HomeWork #1");
                 System.out.println("2. HomeWork #2");
                 System.out.println("3. HomeWork #2. Practical");
+                System.out.println("4. HomeWork #3. Practical");
+//              System.out.println("5. HomeWork #3");
+
+
 
                 try {
                     x = Integer.parseInt(br.readLine());
@@ -29,6 +34,9 @@ public class AllHomeWorks {
                     case 1 -> HomeWork1.doSelectTask();
                     case 2 -> HomeWork2.doTask();
                     case 3 -> HomeWork2Practical.doTask();
+                    case 4 -> HomeWork3Practical.doSelectTask();
+  //                  case 5 -> HomeWork3.doTask();
+
                     case 0 -> {
                     }
                     default -> System.out.println("Wrong task number selected.");
