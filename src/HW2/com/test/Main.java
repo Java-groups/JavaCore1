@@ -11,6 +11,10 @@ public class Main {
         Person person5 = new Person("name", "name");
         person1.input();
         person1.output();
+        person2.input();
+        person2.output();
+        person4.changeName("Admin", "Admin");
+        person4.output();
         person5.input();
         person5.output();
 
