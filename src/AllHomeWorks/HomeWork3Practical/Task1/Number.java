@@ -1,4 +1,4 @@
-package AllHomeWorks.HomeWork3Practical.NumberOdd;
+package AllHomeWorks.HomeWork3Practical.Task1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
