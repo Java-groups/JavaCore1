@@ -1,9 +1,13 @@
 package hw2;
 
+import java.util.Scanner;
+
 public class Application {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Person p1 = new Person();
-        p1.input();
+        p1.input(sc);
+        p1.output();
 
         Person p2 = new Person("Freddie", "Mercury");
 

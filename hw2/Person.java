@@ -1,9 +1,11 @@
 package hw2;
 
+import java.time.LocalDate;
+import java.time.Year;
 import java.util.Scanner;
 
 public class Person {
-    private static final int CURRENT_YEAR = 2022;
+    private static final int CURRENT_YEAR = LocalDate.now().getYear();
     private String firstName;
     private String lastName;
     private int birthYear;
@@ -36,8 +38,7 @@ public class Person {
         return CURRENT_YEAR - birthYear;
     }
 
-    public void input() {
-        Scanner sc = new Scanner(System.in);
+    public void input(Scanner sc) {
         System.out.print("First name: ");
         this.firstName = sc.nextLine();
         System.out.print("Last name: ");
