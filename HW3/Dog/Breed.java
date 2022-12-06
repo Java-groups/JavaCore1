@@ -1,0 +1,5 @@
+public enum Breed {
+    AMERICAN_ESKIMO,
+    AUSTRALIAN_TERRIER,
+    BICHON_FRISE;
+}
