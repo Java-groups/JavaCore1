@@ -2,8 +2,6 @@ package AllHomeWorks.HomeWork2Practical;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-
 
 public class Employee {
     private String name;
@@ -49,8 +47,7 @@ public class Employee {
         return hours;
     }
 
-    public void input() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public void input(BufferedReader br) throws IOException {
         System.out.println("Enter Name:");
         String name = br.readLine();
 

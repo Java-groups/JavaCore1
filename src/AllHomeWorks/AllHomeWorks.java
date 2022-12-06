@@ -10,7 +10,6 @@ import java.io.InputStreamReader;
 
 public class AllHomeWorks {
     public static void main(String[] args) throws IOException {
-
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             int x = -1;
             do {
@@ -22,8 +21,6 @@ public class AllHomeWorks {
                 System.out.println("4. HomeWork #3. Practical");
 //              System.out.println("5. HomeWork #3");
 
-
-
                 try {
                     x = Integer.parseInt(br.readLine());
                 } catch (NumberFormatException e) {
@@ -31,11 +28,11 @@ public class AllHomeWorks {
                 }
 
                 switch (x) {
-                    case 1 -> HomeWork1.doSelectTask();
-                    case 2 -> HomeWork2.doTask();
-                    case 3 -> HomeWork2Practical.doTask();
-                    case 4 -> HomeWork3Practical.doSelectTask();
-  //                  case 5 -> HomeWork3.doTask();
+                    case 1 -> HomeWork1.doSelectTask(br);
+                    case 2 -> HomeWork2.doTask(br);
+                    case 3 -> HomeWork2Practical.doTask(br);
+                    case 4 -> HomeWork3Practical.doSelectTask(br);
+  //                  case 5 -> HomeWork3.doTask(br);
 
                     case 0 -> {
                     }

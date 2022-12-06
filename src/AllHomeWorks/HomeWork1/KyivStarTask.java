@@ -1,11 +1,9 @@
 package AllHomeWorks.HomeWork1;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class KyivStarTask {
-        public static void doTask() throws IOException {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        public static void doTask(BufferedReader br) throws IOException {
 
             System.out.println("Enter price for phone number, country 1");
             int c1 =Integer.parseInt(br.readLine());

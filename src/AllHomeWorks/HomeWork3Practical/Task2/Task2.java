@@ -2,11 +2,9 @@ package AllHomeWorks.HomeWork3Practical.Task2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Task2 {
-    public static void doTask() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void doTask(BufferedReader br) throws IOException {
         int x = -1;
         do {
             System.out.println();

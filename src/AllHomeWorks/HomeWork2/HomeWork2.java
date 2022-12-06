@@ -1,10 +1,11 @@
 package AllHomeWorks.HomeWork2;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class HomeWork2 {
-    public static void doTask() throws IOException {
+    public static void doTask(BufferedReader br) throws IOException {
         ArrayList<Person> personList = new ArrayList<>();
 
         for (int i=0; i<5; i++) {
@@ -12,7 +13,7 @@ public class HomeWork2 {
         System.out.println("Person #" + (i+1));
         Person pers = new Person();
         pers.setNumber(i+1);
-        pers.input();
+        pers.input(br);
         personList.add(pers);
     }
         for (Person person: personList) {

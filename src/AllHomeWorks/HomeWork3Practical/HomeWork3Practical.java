@@ -7,11 +7,9 @@ import AllHomeWorks.HomeWork3Practical.Task3.Task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class HomeWork3Practical {
-public static void doSelectTask() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+public static void doSelectTask(BufferedReader br) throws IOException {
         int x = -1;
         do {
         System.out.println();
@@ -30,10 +28,10 @@ public static void doSelectTask() throws IOException {
         }
 
         switch (x) {
-        case 1 -> Task1.doTask();
-        case 2 -> Task2.doTask();
-        case 3 -> Task2WithEnum.doTask();
-        case 4 -> Task3.doTask();
+        case 1 -> Task1.doTask(br);
+        case 2 -> Task2.doTask(br);
+        case 3 -> Task2WithEnum.doTask(br);
+        case 4 -> Task3.doTask(br);
 //        case 5 -> Task4.doTask();
 
         case 0 -> {

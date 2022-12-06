@@ -1,11 +1,9 @@
 package AllHomeWorks.HomeWork1;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class FlowerBedParametersTask {
-    public static void doTask() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void doTask(BufferedReader br) throws IOException {
 
         System.out.println("Input radius of flower bed");
         int radius_flower_bed = Integer.parseInt(br.readLine());

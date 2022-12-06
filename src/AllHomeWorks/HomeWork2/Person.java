@@ -2,7 +2,6 @@ package AllHomeWorks.HomeWork2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Calendar;
 
 public class Person {
@@ -49,8 +48,7 @@ public int getNumber(){
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         return (currentYear - this.birthYear);
     }
-    public void input() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public void input(BufferedReader br) throws IOException {
         System.out.println("Enter Firstname:");
         String firstName = "";
         firstName = br.readLine();

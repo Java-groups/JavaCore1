@@ -2,11 +2,9 @@ package AllHomeWorks.HomeWork1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class HomeWork1 {
-    public static void doSelectTask() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void doSelectTask(BufferedReader br) throws IOException {
         int x = -1;
         do {
             System.out.println();
@@ -22,9 +20,9 @@ public class HomeWork1 {
             }
 
             switch (x) {
-                case 1 -> FlowerBedParametersTask.doTask();
-                case 2 -> SoftCollectionTask.doTask();
-                case 3 -> KyivStarTask.doTask();
+                case 1 -> FlowerBedParametersTask.doTask(br);
+                case 2 -> SoftCollectionTask.doTask(br);
+                case 3 -> KyivStarTask.doTask(br);
                 case 0 -> {
                 }
                 default -> System.out.println("Wrong task number selected.");

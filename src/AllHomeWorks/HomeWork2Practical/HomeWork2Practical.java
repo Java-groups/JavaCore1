@@ -1,12 +1,11 @@
 package AllHomeWorks.HomeWork2Practical;
 
-import AllHomeWorks.HomeWork2.Person;
-
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class HomeWork2Practical {
-    public static void doTask() throws IOException {
+    public static void doTask(BufferedReader br) throws IOException {
 
         ArrayList<Employee> employeeList = new ArrayList<>();
         int sumSalary = 0;
@@ -14,7 +13,7 @@ public class HomeWork2Practical {
             System.out.println("---------------------------------------------");
             System.out.println(" #" + (i + 1));
             Employee employee = new Employee();
-            employee.input();
+            employee.input(br);
             int Salary = employee.getSalary();
             sumSalary = Salary + sumSalary;
             System.out.println(sumSalary);

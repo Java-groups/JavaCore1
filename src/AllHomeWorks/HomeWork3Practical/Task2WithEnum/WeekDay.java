@@ -1,13 +1,13 @@
 package AllHomeWorks.HomeWork3Practical.Task2WithEnum;
 
 public enum WeekDay {
-    Monday("Asia", "Понеділок"),
-    Tuesday("Africa", "Вівторок"),
-    Wednesday("Europe", "Середа"),
-    Thursday("NorthAmerica","Четвер"),
-    Friday("SouthAmerica", "П'ятниця"),
-    Saturday("Australia", "Субота"),
-    Sunday("Antarctica", "Неділя");
+    Monday("Monday", "Понеділок"),
+    Tuesday("Tuesday", "Вівторок"),
+    Wednesday("Wednesday", "Середа"),
+    Thursday("Thursday","Четвер"),
+    Friday("Friday", "П'ятниця"),
+    Saturday("Saturday", "Субота"),
+    Sunday("Sunday", "Неділя");
     private final String ua;
     private final String en;
 

@@ -2,7 +2,6 @@ package AllHomeWorks.HomeWork3Practical.Task1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Number {
     private int number;
@@ -15,8 +14,7 @@ public class Number {
         return this.number;
     }
 
-    public void input() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public void input(BufferedReader br) throws IOException {
         System.out.println("Enter Number:");
         int number = 0;
 

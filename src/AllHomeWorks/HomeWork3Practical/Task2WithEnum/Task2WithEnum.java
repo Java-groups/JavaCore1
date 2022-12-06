@@ -2,11 +2,9 @@ package AllHomeWorks.HomeWork3Practical.Task2WithEnum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Task2WithEnum {
-    public static void doTask() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void doTask(BufferedReader br) throws IOException {
         int x = -1;
         WeekDay selectedWeekDay = null;
 
