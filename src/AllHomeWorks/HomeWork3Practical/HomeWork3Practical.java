@@ -3,6 +3,7 @@ package AllHomeWorks.HomeWork3Practical;
 import AllHomeWorks.HomeWork3Practical.Task1.Task1;
 import AllHomeWorks.HomeWork3Practical.Task2.Task2;
 import AllHomeWorks.HomeWork3Practical.Task2WithEnum.Task2WithEnum;
+import AllHomeWorks.HomeWork3Practical.Task3.Task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,8 +19,8 @@ public static void doSelectTask() throws IOException {
         System.out.println("1. Check numbers on odd.");
         System.out.println("2. Day of week");
         System.out.println("3. Day of week with enum");
-//        System.out.println("3. Continent.");
-//        System.out.println("4. About Product");
+        System.out.println("4. Continent.");
+//        System.out.println("5. About Product");
 
 
         try {
@@ -32,8 +33,8 @@ public static void doSelectTask() throws IOException {
         case 1 -> Task1.doTask();
         case 2 -> Task2.doTask();
         case 3 -> Task2WithEnum.doTask();
-//        case 3 -> Task3.doTask();
-//        case 4 -> Task4.doTask();
+        case 4 -> Task3.doTask();
+//        case 5 -> Task4.doTask();
 
         case 0 -> {
         }

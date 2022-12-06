@@ -35,6 +35,7 @@ public class Task2WithEnum {
                 default -> System.out.println("Please input number from 1 to 7, or 0 - for exit:");
             }
         } while (x <1 || x>7);
+
         System.out.println(selectedWeekDay.getEn() + ". "+selectedWeekDay.getUa());
 
     }
