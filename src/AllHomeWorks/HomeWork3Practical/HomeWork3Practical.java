@@ -4,6 +4,7 @@ import AllHomeWorks.HomeWork3Practical.Task1.Task1;
 import AllHomeWorks.HomeWork3Practical.Task2.Task2;
 import AllHomeWorks.HomeWork3Practical.Task2WithEnum.Task2WithEnum;
 import AllHomeWorks.HomeWork3Practical.Task3.Task3;
+import AllHomeWorks.HomeWork3Practical.Task4.Task4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public static void doSelectTask(BufferedReader br) throws IOException {
         System.out.println("2. Day of week");
         System.out.println("3. Day of week with enum");
         System.out.println("4. Continent.");
-//        System.out.println("5. About Product");
+        System.out.println("5. About Product");
 
 
         try {
@@ -32,7 +33,7 @@ public static void doSelectTask(BufferedReader br) throws IOException {
         case 2 -> Task2.doTask(br);
         case 3 -> Task2WithEnum.doTask(br);
         case 4 -> Task3.doTask(br);
-//        case 5 -> Task4.doTask();
+        case 5 -> Task4.doTask(br);
 
         case 0 -> {
         }
