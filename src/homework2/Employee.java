@@ -6,8 +6,7 @@ public class Employee {
 	private String name;
 	private double rate;
 	private double hours;
-	private double salary;
-	private double bonus;
+
 
 	public String getName() {
 		return name;
@@ -34,49 +33,35 @@ public class Employee {
 	}
 
 	public double getSalary() {
-		return salary;
+		return rate*hours;
 	}
 
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
 
 	public double getBounus() {
-		return bonus;
+		
+		return getSalary()*0.1;
 	}
 
-	public void setBounus(double bonus) {
-		this.bonus = bonus;
-	}
 
 	public Employee(String name, double rate, double hours) {
 
 		this.name = name;
 		this.rate = rate;
 		this.hours = hours;
-		this.salary = rate * hours;
-		bonus = salary * 0.1;
-		salary +=bonus;
-		salarySum += salary;
+		salarySum += getSalary();
 
 	}
 
 	public Employee(String name) {
 
 		this.name = name;	
-		this.salary = rate*hours;
-		bonus = salary*0.1;
-		salary +=bonus;
-		salarySum +=salary;
+		salarySum += getSalary();
 		
 	}
 
 	public Employee() {
 
-		this.salary = rate * hours;
-		bonus = salary * 0.1;
-		salary +=bonus;
-		salarySum += salary;
+		salarySum += getSalary();
 
 	}
 
