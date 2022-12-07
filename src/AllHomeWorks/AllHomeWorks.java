@@ -2,6 +2,7 @@ package AllHomeWorks;
 import AllHomeWorks.HomeWork1.HomeWork1;
 import AllHomeWorks.HomeWork2.HomeWork2;
 import AllHomeWorks.HomeWork2Practical.HomeWork2Practical;
+import AllHomeWorks.HomeWork3.HomeWork3;
 import AllHomeWorks.HomeWork3Practical.HomeWork3Practical;
 
 import java.io.BufferedReader;
@@ -19,6 +20,7 @@ public class AllHomeWorks {
                 System.out.println("2. HomeWork #2");
                 System.out.println("3. HomeWork #2. Practical");
                 System.out.println("4. HomeWork #3. Practical");
+                System.out.println("5. HomeWork #3");
 
                 try {
                     x = Integer.parseInt(br.readLine());
@@ -31,6 +33,7 @@ public class AllHomeWorks {
                     case 2 -> HomeWork2.doTask(br);
                     case 3 -> HomeWork2Practical.doTask(br);
                     case 4 -> HomeWork3Practical.doSelectTask(br);
+                    case 5 -> HomeWork3.doSelectTask(br);
 
                     case 0 -> {
                     }
