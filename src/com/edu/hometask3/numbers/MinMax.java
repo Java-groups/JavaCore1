@@ -7,6 +7,7 @@ public class MinMax {
     private int number2;
     private int number3;
 
+
     public MinMax() {
 
     }
@@ -53,6 +54,7 @@ public class MinMax {
         if ((number3 < number1) & (number3 < number2))
             System.out.println(number3 + " is MIN");
     }
+
     public void checkForMax() {
         if ((number1 > number2) & (number1 > number3))
             System.out.println(number1 + " is MAX");
