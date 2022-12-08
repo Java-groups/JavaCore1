@@ -17,13 +17,13 @@ public class Task2 {
             }
 
             switch (x) {
-                case 1 -> System.out.println("Asia. Понеділок");
-                case 2 -> System.out.println("Africa. Вівторок");
-                case 3 -> System.out.println("Europe. Середа");
-                case 4 -> System.out.println("Africa. Четвер");
-                case 5 -> System.out.println("SouthAmerica. П'ятниця");
-                case 6 -> System.out.println("Australia. Субота");
-                case 7 -> System.out.println("Antarctica. Неділя");
+                case 1 -> System.out.println("Monday. Понеділок");
+                case 2 -> System.out.println("Tuesday. Вівторок");
+                case 3 -> System.out.println("Wednesday. Середа");
+                case 4 -> System.out.println("Tuesday. Четвер");
+                case 5 -> System.out.println("Friday. П'ятниця");
+                case 6 -> System.out.println("Saturday. Субота");
+                case 7 -> System.out.println("Sunday. Неділя");
 
                 case 0 -> {
                 }
