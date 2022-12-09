@@ -1,6 +1,7 @@
 package AllHomeWorks.Homework4Practical;
 
 import AllHomeWorks.Homework4Practical.Task1.Task1;
+import AllHomeWorks.Homework4Practical.Task2.Task2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class Homework4Practical {
 
             switch (x) {
                 case 1 -> Task1.doTask(br);
- //               case 2 -> Task2.doTask(br);
+                case 2 -> Task2.doTask(br);
 
                 case 0 -> {
                 }
