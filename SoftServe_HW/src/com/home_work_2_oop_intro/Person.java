@@ -7,8 +7,8 @@ import java.time.Year;
 
 public class Person 
 {
-	private String firstName, 
-	   lastName;
+	private String firstName; 
+	private String lastName;
 	private int  birthYear;
 
 	private static int count = 0;
@@ -143,7 +143,7 @@ public class Person
 			{
 				while( !"q".equals(in_word=in.next()) && Integer.parseInt(in_word)<=0 )
 				{
-					System.out.println("Please, enter integer value greater then zero, or `q`.");					
+					System.out.println("Please, enter integer value greater than zero, or `q`.");					
 				}
 				if ("q".equals(in_word)) 
 				{
@@ -156,7 +156,7 @@ public class Person
 			}
 			catch(NumberFormatException exc)
 			{
-				System.out.println("Please, enter integer value greater then zero, or for exit enter: q.");
+				System.out.println("Please, enter integer value greater than zero, or for exit enter: q.");
 			}
 		}while(true); 
 	}
