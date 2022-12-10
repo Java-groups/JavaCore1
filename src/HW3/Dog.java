@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Dog {
 
     private String name;
-    private String breed;
+    private Breed breed;
     private int age;
 
     public String getName() {
@@ -16,11 +16,11 @@ public class Dog {
         this.name = name;
     }
 
-    public String getBreed() {
+    public Breed getBreed() {
         return breed;
     }
 
-    public void setBreed(String breed) {
+    public void setBreed(Breed breed) {
         this.breed = breed;
     }
 

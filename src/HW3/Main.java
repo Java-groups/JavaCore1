@@ -3,17 +3,17 @@ package HW3;
 public class Main {
     public static void main(String[] args) {
         Dog dog1 = new Dog();
-        dog1.setBreed(String.valueOf(Breed.Bulldog));
+        dog1.setBreed((Breed.Bulldog));
         dog1.setName("art");
         dog1.setAge(1);
 
         Dog dog2 = new Dog();
-        dog2.setBreed(String.valueOf(Breed.Dobermann));
+        dog2.setBreed((Breed.Dobermann));
         dog2.setName("ART");
         dog2.setAge(4);
 
         Dog dog3 = new Dog();
-        dog3.setBreed(String.valueOf(Breed.Poodle));
+        dog3.setBreed((Breed.Poodle));
         dog3.setName("tom");
         dog3.setAge(3);
 
