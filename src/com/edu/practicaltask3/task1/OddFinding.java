@@ -39,18 +39,18 @@ public class OddFinding {
 
     public void checkForOdd() throws Exception {
 
-        if (this.number1 % 2 == 0) {
+        if (this.number1 % 2 > 0) {
             System.out.println("Number " + this.getNumber1() + " is odd");
         } else {
             System.out.println("Here is not odd numbers");
 
         }
-        if (this.number2 % 2 == 0) {
+        if (this.number2 % 2 > 0) {
             System.out.println("Number " + this.getNumber2() + " is odd");
         } else {
             System.out.println("Here is not odd numbers");
         }
-        if (this.number3 % 2 == 0) {
+        if (this.number3 % 2 >0) {
             System.out.println("Number " + this.getNumber3() + " is odd");
         } else {
             System.out.println("Here is not odd numbers");
