@@ -5,15 +5,64 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ConditionalStatements {
-    public float a;
-    public float b;
-    public float c;
-    public int d;
-    public int e;
-    public int f;
-    public int min;
-    public int max;
-    public int temp;
+
+    private float a;
+    private float b;
+    private float c;
+    private int d;
+    private int e;
+    private int f;
+    private int min;
+    private int max;
+    private int temp;
+
+    public float getA() {
+        return a;
+    }
+
+    public void setA(float a) {
+        this.a = a;
+    }
+
+    public float getB() {
+        return b;
+    }
+
+    public void setB(float b) {
+        this.b = b;
+    }
+
+    public float getC() {
+        return c;
+    }
+
+    public void setC(float c) {
+        this.c = c;
+    }
+
+    public int getD() {
+        return d;
+    }
+
+    public void setD(int d) {
+        this.d = d;
+    }
+
+    public int getE() {
+        return e;
+    }
+
+    public void setE(int e) {
+        this.e = e;
+    }
+
+    public int getF() {
+        return f;
+    }
+
+    public void setF(int f) {
+        this.f = f;
+    }
 
     public static void main(String[] args) throws IOException {
         ConditionalStatements cs = new ConditionalStatements();
