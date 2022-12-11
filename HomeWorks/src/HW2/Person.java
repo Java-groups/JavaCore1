@@ -33,15 +33,15 @@ public class Person {
 	
 	public String getFirstName() {
         return firstName;
-    }
+        }
 	
-    public String getLastName() {
+        public String getLastName() {
         return lastName;
-    }
+        }
 
-    public Integer getBirthYear() {
+        public Integer getBirthYear() {
 	    return birthYear;
-    }
+        }
 	
 	public void input() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
