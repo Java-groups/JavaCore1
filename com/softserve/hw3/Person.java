@@ -69,8 +69,7 @@ public class Person {
     }
 
     public int getAge() {
-        int personAge = 2022 - getBirthYear();
-        return personAge;
+        return 2022 - getBirthYear();
     }
 
     public void input() throws IOException {
@@ -80,7 +79,7 @@ public class Person {
         System.out.println("Input last name: ");
         setLastName(bf.readLine());
         System.out.println("Input birth year: ");
-        setBirthYear(bf.read());
+        setBirthYear(Integer.parseInt(bf.readLine()));
     }
 
     public void output() {
