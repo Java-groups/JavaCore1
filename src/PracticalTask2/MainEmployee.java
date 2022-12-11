@@ -1,6 +1,6 @@
-package PracticalTask;
+package PracticalTask2;
 
-import static PracticalTask.Employee.totalSum;
+import static PracticalTask2.Employee.totalSum;
 
 public class MainEmployee {
     public static void main(String[] args) {

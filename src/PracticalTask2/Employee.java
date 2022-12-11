@@ -1,4 +1,4 @@
-package PracticalTask;
+package PracticalTask2;
 
 public class Employee {
     private String name;

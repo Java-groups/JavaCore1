@@ -1,3 +1,5 @@
+package HW1;
+
 import java.util.Scanner;
 
 public class Introduction_2 {
