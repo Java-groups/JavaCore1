@@ -68,6 +68,7 @@ public class ConditionalStatements {
         ConditionalStatements cs = new ConditionalStatements();
         cs.floatNumbers();
         cs.intNumbers();
+        cs.httpErrors();
     }
 
     public void floatNumbers() throws IOException {
@@ -97,7 +98,28 @@ public class ConditionalStatements {
         max = temp > f ? temp : f;
         temp = d < e ? d : e;
         min = temp < f ? temp : f;
-        System.out.println("Min number is: " + min);
-        System.out.println("Max number is: " + max);
+        System.out.println("Min number is: " + min + "\n");
+        System.out.println("Max number is: " + max + "\n");
     }
+
+    public enum HTTPErrors {
+        SUCCESS, REDIRECT, CLIENTERROR;
+    }
+
+    public void httpErrors() {
+        HTTPErrors he = HTTPErrors.SUCCESS;
+        switch (he) {
+            case SUCCESS:
+                System.out.println("Error code is: 200");
+                break;
+            case REDIRECT:
+                System.out.println("Error code is: 300");
+                break;
+            case CLIENTERROR:
+                System.out.println("Error code is: 400");
+                break;
+        }
+
+    }
+
 }
