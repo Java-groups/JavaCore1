@@ -23,3 +23,11 @@
 hs_err_pid*
 
 .DS_Store
+/.metadata/
+.classpath
+.project
+/.HomeWorks/.classpath
+/.HomeWorks/.gitignore
+/.HomeWorks/.project
+/.HomeWorks/.settings/
+/.HomeWorks/src/module-info.java

@@ -1,4 +1,4 @@
-package com.edu.task3;
+package HW1.task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
