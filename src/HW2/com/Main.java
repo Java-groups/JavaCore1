@@ -1,6 +1,6 @@
-package HW2.com.test;
+package HW2.com;
 
-import HW2.com.test.model.Person;
+import HW2.com.model.Person;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,8 +17,6 @@ public class Main {
         person4.output();
         person5.input();
         person5.output();
-
-
 
     }
 }

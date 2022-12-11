@@ -1,4 +1,4 @@
-package HW2.com.test.model;
+package HW2.com.model;
 
 import java.time.LocalDate;
 import java.util.Scanner;
