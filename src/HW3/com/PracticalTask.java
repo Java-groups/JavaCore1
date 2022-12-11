@@ -1,4 +1,4 @@
-package HW3.com.model;
+package HW3.com;
 
 import HW3.com.model.DayOfWeek;
 import HW3.com.model.Product;
