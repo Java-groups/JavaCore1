@@ -26,8 +26,8 @@ hs_err_pid*
 /.metadata/
 .classpath
 .project
-/.HomeWorks/.classpath
-/.HomeWorks/.gitignore
-/.HomeWorks/.project
-/.HomeWorks/.settings/
-/.HomeWorks/src/module-info.java
+.HomeWorks/.classpath
+.HomeWorks/.gitignore
+.HomeWorks/.project
+.HomeWorks/.settings/
+.HomeWorks/src/module-info.java
