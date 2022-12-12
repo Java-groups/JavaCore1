@@ -14,7 +14,7 @@ public class Main {
             carYears[i] = Integer.parseInt(br.readLine());
         }
 
-        Arrays.sort(carYears);
+
 
         Car car1 = new Car(carYears[0], 3.5, "Pickup" );
         System.out.println(car1);
@@ -24,6 +24,11 @@ public class Main {
         System.out.println(car3);
         Car car4 = new Car(carYears[3], 2.0, "Minivan" );
         System.out.println(car4);
+
+        Arrays.sort(carYears);
+
+        Car[] cars = new Car[4];
+
 
 
     }
