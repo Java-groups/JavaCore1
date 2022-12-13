@@ -46,6 +46,7 @@ public class Employee {
                     }
                 }
             }
+
             System.out.println("list of the employees sorted by salary: ");
             for (i = 0; i < employees.length; i++) {
                 if (employees[i].getDepartmentNumber() == index) {

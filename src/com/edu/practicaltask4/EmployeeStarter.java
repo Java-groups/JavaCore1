@@ -1,9 +1,7 @@
 package com.edu.practicaltask4;
-
 import java.util.Scanner;
 
 public class EmployeeStarter {
-
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
@@ -16,7 +14,7 @@ public class EmployeeStarter {
         employees[4] = new Employee("Petro", 1, 300);
 
         Employee.listEmployeesSameDep(Employee.inputDepartment(sc), employees);
-      
+
     }
 
 }
