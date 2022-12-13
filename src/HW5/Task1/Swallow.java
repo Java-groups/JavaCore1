@@ -1,21 +1,19 @@
-package HW5;
+package HW5.Task1;
 
-public class Eagle extends FlyingBird{
+public class Swallow extends FlyingBird{
 
-    public Eagle() {};
-    public Eagle(String feathers, String layEggs) {
+    public Swallow() {};
+    public Swallow(String feathers, String layEggs) {
         setFeathers(feathers);
         setLayEggs(layEggs);
-    };
+    }
 
     @Override
     public String toString() {
-        return "Eagle {" +
+        return "Swallow {" +
                 "fathers='" + getFeathers() + '\'' +
                 ", layEggs='" + getLayEggs() + '\'' +
                 '}';
     }
 
-
 }
-

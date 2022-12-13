@@ -1,6 +1,4 @@
-package HW5;
-
-import java.util.Arrays;
+package HW5.Task1;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package HW5;
+package HW5.Task1;
 
 public class NonFlyingBird extends Bird{
 

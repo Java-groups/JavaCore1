@@ -1,4 +1,4 @@
-package HW5;
+package HW5.Task1;
 
 abstract public class Bird {
     private String feathers;
