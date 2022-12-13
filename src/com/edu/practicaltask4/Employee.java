@@ -25,7 +25,6 @@ public class Employee {
         this.salary = salary;
     }
 
-
     public static int inputDepartment(Scanner sc) throws Exception {
 
         System.out.println("Input the department number: ");

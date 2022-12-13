@@ -1,6 +1,5 @@
 package com.edu.practicaltask4;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class EmployeeStarter {
