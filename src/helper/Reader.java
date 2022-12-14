@@ -27,7 +27,7 @@ public class Reader {
         int value;
         while(true){
             value = Integer.parseInt(read("Incorrect value, please try again:", DataTypes.INTEGER));
-            if (value>min && value<max){
+            if (value>=min && value<=max){
                 return value;
             } else {
                 System.out.printf("Number must be in range from %s to %s\n", min, max);
