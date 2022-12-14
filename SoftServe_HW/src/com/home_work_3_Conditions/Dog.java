@@ -115,7 +115,7 @@ public class Dog
 	protected static String getOlderDogBreed() 
 	{
 		name_age_dog_list.forEach((k, v) -> {if(v == olderDogAge) olderDogName = k;} );
-		return name_breed_dog_list.get(olderDogName);
+		return name_breed_dog_list.get(olderDogName); 
 	}
 
 	protected static void showDogs()
