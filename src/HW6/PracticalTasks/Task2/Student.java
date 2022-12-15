@@ -1,4 +1,4 @@
-package PracticalTasks.Task2;
+package HW6.PracticalTasks.Task2;
 
 public class Student extends Person{
     final String TYPE_PERSON = "Student";

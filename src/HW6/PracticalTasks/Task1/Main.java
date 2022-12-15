@@ -1,4 +1,4 @@
-package PracticalTasks.Task1;
+package HW6.PracticalTasks.Task1;
 
 public class Main {
     public static void main(String[] args) {

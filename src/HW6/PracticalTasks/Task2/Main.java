@@ -1,6 +1,4 @@
-package PracticalTasks.Task2;
-
-import java.util.SortedMap;
+package HW6.PracticalTasks.Task2;
 
 public class Main {
     public static void main(String[] args) {

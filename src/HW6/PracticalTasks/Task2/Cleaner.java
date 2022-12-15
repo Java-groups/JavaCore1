@@ -1,4 +1,4 @@
-package PracticalTasks.Task2;
+package HW6.PracticalTasks.Task2;
 
 public class Cleaner extends Staff{
     final String TYPE_PERSON = "Cleaner";

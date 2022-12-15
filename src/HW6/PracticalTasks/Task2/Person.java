@@ -1,4 +1,4 @@
-package PracticalTasks.Task2;
+package HW6.PracticalTasks.Task2;
 
 abstract public class Person {
     String name;
