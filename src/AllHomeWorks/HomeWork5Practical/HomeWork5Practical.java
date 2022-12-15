@@ -9,15 +9,15 @@ import java.io.IOException;
 public class HomeWork5Practical {
     public static void doSelectTask(BufferedReader br) throws IOException {
         int x = -1;
-        do {
-            System.out.println();
-            System.out.println("Please, put the number of task:");
-            System.out.println("1. Work with Lines.");
-            System.out.println("2. About Car");
+            do {
+                System.out.println();
+                System.out.println("Please, put the number of task:");
+                System.out.println("1. Work with Lines.");
+                System.out.println("2. About Car");
 
-            try {
-                x = Integer.parseInt(br.readLine());
-            } catch (NumberFormatException e) {
+                try {
+                    x = Integer.parseInt(br.readLine());
+                } catch (NumberFormatException e) {
 
             }
 
