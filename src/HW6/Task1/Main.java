@@ -11,7 +11,6 @@ public class Main {
         employees[2] = new ContractEmployee(2500,"DF34","Eva");
 
 
-
         for (int i = 0; i < employees.length; i++) {
         System.out.println(employees[i]); }
 
