@@ -1,4 +1,4 @@
-package HW2;
+package HW2.task1;
 
 import java.io.IOException;
 
@@ -27,16 +27,11 @@ public class Main {
 	    person3.output();
 	    
 	    System.out.println("\nPerson 4:");
-	    person3.input();
-	    person3.output();
+	    person4.input();
+	    person4.output();
 	    
 	    System.out.println("\nPerson 5:");
-	    person3.input();
-	    person3.output();
-	    
-	
+	    person5.input();
+	    person5.output();    
 	}
-
-
-
 }

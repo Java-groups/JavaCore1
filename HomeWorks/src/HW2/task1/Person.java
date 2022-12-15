@@ -1,4 +1,4 @@
-package HW2;
+package HW2.task1;
 
 import java.time.LocalDate;
 import java.io.BufferedReader;
