@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Month {
     public static int inputMonthNumber(Scanner sc) throws Exception {
-        int month;
         System.out.println("Input the month number: ");
-        return month = sc.nextInt();
+        return sc.nextInt();
     }
 
     public static void printDayQuantity(int month, int days[]) {
