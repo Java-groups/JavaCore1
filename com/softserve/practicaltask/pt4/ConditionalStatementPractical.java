@@ -19,8 +19,8 @@ public class ConditionalStatementPractical {
 
     public static void main(String[] args) throws IOException {
         ConditionalStatementPractical cs = new ConditionalStatementPractical();
-//        cs.oddNumbers();
-//        cs.dayOfTheWeek();
+        cs.oddNumbers();
+        cs.dayOfTheWeek();
         cs.continentCountry();
     }
 
