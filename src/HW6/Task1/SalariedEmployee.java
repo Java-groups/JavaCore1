@@ -7,7 +7,8 @@ public class SalariedEmployee extends Employee implements Payment{
 
     @Override
     public double calculatePay() {
-        return setSalary(hourlyRate*numbersOfHoursWorked);
+        setSalary(hourlyRate*numbersOfHoursWorked);
+        return getSalary();
     }
 
     public double getHourlyRate() {
@@ -49,4 +50,9 @@ public class SalariedEmployee extends Employee implements Payment{
                 ", ID: " +  getSSN()+ ", Salary: " + calculatePay() +
                 '}';
     }
+
+//    @Override
+//    public void setSalary(double salary) {
+//        this.setSalary(hourlyRate*numbersOfHoursWorked);
+//    }
 }

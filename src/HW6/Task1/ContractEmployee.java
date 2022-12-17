@@ -6,7 +6,8 @@ public class ContractEmployee extends Employee implements Payment{
 
     @Override
     public double calculatePay() {
-        return setSalary(fixedMonthlyPayment);
+        setSalary(fixedMonthlyPayment);
+        return getSalary();
     }
 
     public double getFixedMonthlyPayment() {
@@ -39,4 +40,8 @@ public class ContractEmployee extends Employee implements Payment{
                 '}';
     }
 
+//    @Override
+//    public void  setSalary(double salary) {
+//        this.setSalary(fixedMonthlyPayment);
+//    }
 }

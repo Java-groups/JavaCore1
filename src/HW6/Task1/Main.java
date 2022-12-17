@@ -14,5 +14,13 @@ public class Main {
         for (int i = 0; i < employees.length; i++) {
         System.out.println(employees[i]); }
 
+        Arrays.sort(employees,Employee.getSalaryComparator());
+        System.out.println();
+        for (int i = 0; i < employees.length; i++) {
+            System.out.println(employees[i]); }
+        Arrays.sort(employees);
+        System.out.println();
+        for (int i = 0; i < employees.length; i++) {
+            System.out.println(employees[i]); }
     }
 }
