@@ -1,6 +1,9 @@
 package com.softserve.practicaltask.pt4;
 
 public class Product {
+    public static void main(String[] args) {
+
+    }
     private String name;
     private int price;
     private int quantity;
@@ -21,7 +24,7 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public static void main(String[] args) {
+    public void maxPrice() {
         Product product = new Product();
 
         Product item1 = new Product("item1", 10, 1);
@@ -38,10 +41,10 @@ public class Product {
         }
         if (item3.price > item4.price) {
             Product maxPrice2 = new Product(item3.name, item3.quantity);
-            product.maxPrice2 = item1.price;
+            product.maxPrice2 = item3.price;
         } else {
             Product maxPrice2 = new Product(item4.name, item4.quantity);
-            product.maxPrice2 = item2.price;
+            product.maxPrice2 = item4.price;
         }
         if (product.maxPrice1 > product.maxPrice2) {
             System.out.println(maxPrice1);
