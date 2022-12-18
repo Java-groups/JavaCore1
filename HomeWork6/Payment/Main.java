@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int tmp;
+        Employee tmp;
         Employee[] employee = new Employee[4];
         employee[0] = new SalariedEmployee("Alex",25,50,50,5);
         employee[1] = new ContractEmployee("Brad",1,6500,2);
@@ -20,9 +20,9 @@ public class Main {
         for (int i = 0; i < employee.length - 1; i++) {
             for (int j = i + 1; j < employee.length; j++) {
                 if (employee[i].getSalary() > employee[j].getSalary()) {
-                    tmp = employee[i].getSalary();
-                    employee[i].salary = employee[j].salary;
-                    employee[j].salary = tmp;
+                    tmp = employee[i];
+                    employee[i] = employee[j];
+                    employee[j] = tmp;
                 }
             }
         }
