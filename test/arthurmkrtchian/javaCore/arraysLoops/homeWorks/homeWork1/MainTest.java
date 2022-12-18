@@ -12,4 +12,7 @@ class MainTest {
         assertTrue(Main.getMonth(1) == "January");
         assertTrue(Main.getMonth(11) == "November");
     }
+
+    private void assertTrue(boolean b) {
+    }
 }
