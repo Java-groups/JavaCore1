@@ -19,4 +19,12 @@ public class Boat extends WaterVehicle{
     public void isSailing() {
         super.isSailing();
     }
+
+    @Override
+    public String toString() {
+        return "Boat{" +
+                "volume = " + volume + ", passengers = " + getPassengers() +
+                '}';
+    }
+
 }

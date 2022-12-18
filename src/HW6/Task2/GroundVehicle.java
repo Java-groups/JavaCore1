@@ -4,5 +4,7 @@ abstract public class GroundVehicle extends Passengers implements Vechicle{
     public GroundVehicle(int passengers) {
         super(passengers);
     }
-    public void drive() {}
+    public void drive() {
+        System.out.println("can drive");
+    }
 }

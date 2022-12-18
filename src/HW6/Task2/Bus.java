@@ -19,4 +19,11 @@ public class Bus extends GroundVehicle{
     public void drive() {
         super.drive();
     }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                "route = '" + route + '\'' + ", passengers = " + getPassengers() +
+                '}';
+    }
 }

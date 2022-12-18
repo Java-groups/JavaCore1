@@ -19,4 +19,11 @@ public class Car extends GroundVehicle{
     public void drive() {
         super.drive();
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model = '" + model + '\'' + ", passengers = " + getPassengers() +
+                '}';
+    }
 }

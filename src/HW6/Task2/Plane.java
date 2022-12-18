@@ -24,4 +24,11 @@ public class Plane extends FlyingVehicle{
     public void land() {
         super.land();
     }
+
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "maxDistance = " + maxDistance + ", passengers = " + getPassengers() +
+                '}';
+    }
 }

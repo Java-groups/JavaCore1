@@ -4,5 +4,6 @@ abstract public class WaterVehicle extends Passengers implements Vechicle{
     public WaterVehicle(int passengers) {
         super(passengers);
     }
-    public void isSailing() {}
+    public void isSailing() {
+        System.out.println("can sailing"); }
 }
