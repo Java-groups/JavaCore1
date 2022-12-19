@@ -7,8 +7,6 @@ public class ColorLine extends Line {
 
     public ColorLine(Point p1, Point p2, String color) {
         super(p1, p2);
-        this.p1 = p1;
-        this.p2 = p2;
         this.color = color;
     }
 

@@ -5,6 +5,12 @@ public abstract class Car {
     protected int maxSpeed;
     protected int yearOfManufacture;
 
+    public Car(String model, int maxSpeed, int yearOfManufacture) {
+        this.model = model;
+        this.maxSpeed = maxSpeed;
+        this.yearOfManufacture = yearOfManufacture;
+    }
+
     public void run() {
     }
 
