@@ -61,13 +61,13 @@ public class Car {
     /*Bubble sorting, rewrite field year in the array "cars" only*/
     public static void listCarByYear(int index, Car[] cars) {
 
-        int tmp;
+        Car tmp;
         for (int i = 0; i < cars.length - 1; i++) {
             for (int j = i + 1; j < cars.length; j++) {
                 if (cars[i].getYear() < cars[j].getYear()) {
-                    tmp = cars[i].getYear();
-                    cars[i].year = cars[j].year;
-                    cars[j].year = tmp;
+                    tmp = cars[i];
+                    cars[i] = cars[j];
+                    cars[j] = tmp;
                 }
             }
         }
