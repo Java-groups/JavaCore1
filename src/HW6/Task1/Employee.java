@@ -2,10 +2,11 @@ package HW6.Task1;
 
 import java.util.Comparator;
 
-abstract public class Employee implements Comparable<Employee>{
+abstract public class Employee implements Comparable<Employee> {
     private String employeeld;
     private double salary;
     static SalaryComparator salaryComparator = new SalaryComparator();
+
     public static Comparator getSalaryComparator() {
         return salaryComparator;
     }
@@ -22,9 +23,9 @@ abstract public class Employee implements Comparable<Employee>{
         return salary;
     }
 
-     public void setSalary(double salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
-     }
+    }
 
     @Override
     public int compareTo(Employee o) {
