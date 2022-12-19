@@ -47,7 +47,16 @@ public class CreateBirdList
 			}
 		}while(!exit);
 
-		bird_map_list.forEach((k, v) -> System.out.println(k + ". " + "; Name: " + ((Employee)v).getName() + "; Salary: " + ((Employee)v).getSalary() + "; Department: " + ((Employee)v).getDepartment()));
+		bird_map_list.forEach((k, v) -> {
+											switch(v.getClass().toString()) 
+											{
+												case "class com.home_work_5_OOP_1.Chicken":  System.out.println("Chicken name: " + ((Chicken)v).getChickenName()); break;
+												case "class com.home_work_5_OOP_1.Penguin": System.out.println("Penguin name: " + ((Penguin)v).getPenguinName()); break;
+												case "class com.home_work_5_OOP_1.Swallow": System.out.println("Swallow name: " + ((Swallow)v).getSwallowName()); break;
+												case "class com.home_work_5_OOP_1.Eagle": System.out.println("Eagle name: " + ((Eagle)v).getEagleName()); break;
+												default: break;
+											}
+										});
 	}
 
 	protected static int checkInFormatIntOrExit(BufferedReader sc) throws IOException
