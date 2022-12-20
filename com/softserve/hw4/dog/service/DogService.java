@@ -1,6 +1,5 @@
 package com.softserve.hw4.dog.service;
 
-import com.softserve.hw4.dog.DogMain;
 import com.softserve.hw4.dog.model.Dog;
 
 public class DogService {
@@ -24,13 +23,5 @@ public class DogService {
         }
         return dogsMaxAge;
     }
-
-    public void maxAge(DogMain dog1, DogMain dog2, DogMain dog3) {
-//        DogMain dog;
-//
-//        if (dog1.age > dog2.age && dog1.age > dog3.age) {
-//            dog = dog1;
-//            System.out.println(dog);
-//        }
-    }
 }
+
