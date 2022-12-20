@@ -13,8 +13,8 @@ public class ArraysLoops {
 
     public static void main(String[] args) throws IOException {
         ArraysLoops al = new ArraysLoops();
-//        al.daysInMonth();
-//        al.tenNumbers();
+        al.daysInMonth();
+        al.tenNumbers();
         al.secondPositive();
     }
 
@@ -29,7 +29,7 @@ public class ArraysLoops {
     public void tenNumbers() throws IOException {
         System.out.println("Input 10 numbers: ");
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < tenNumbers.length; i++) {
             tenNumbers[i] = Integer.parseInt(input.readLine());
         }
 
