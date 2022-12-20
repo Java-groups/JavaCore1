@@ -51,7 +51,7 @@ public class Employee
 		this.salary = salary;
 	}
 
-	protected static void createEmployeeInstanceList(BufferedReader br, String employee_type) throws IOException
+	protected static void createDogInstanceList(BufferedReader br, String employee_type) throws IOException
 	{
 		String  in_employee_name;
 		double  in_emp_salary;
