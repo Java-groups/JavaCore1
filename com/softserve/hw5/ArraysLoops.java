@@ -9,11 +9,13 @@ public class ArraysLoops {
     int[] daysInMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private int monthNumber;
     private int[] tenNumbers = new int[10];
+    private int[] secondPositive = new int[5];
 
     public static void main(String[] args) throws IOException {
         ArraysLoops al = new ArraysLoops();
-        al.daysInMonth();
-        al.tenNumbers();
+//        al.daysInMonth();
+//        al.tenNumbers();
+        al.secondPositive();
     }
 
     public void daysInMonth() throws IOException {
@@ -48,5 +50,39 @@ public class ArraysLoops {
                 }
             System.out.println("5 last multiplied numbers: " + multiply);
         }
+    }
+
+    public void secondPositive() throws IOException {
+
+        System.out.println("Input 5 numbers: ");
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 5; i++) {
+            secondPositive[i] = Integer.parseInt(input.readLine());
+        }
+
+        int i = 0;
+        int loop = 0;
+        int min = 0;
+        int arrayMin = secondPositive[0];
+        int evenNumb = 1;
+        while (i < secondPositive.length) {
+            if (secondPositive[i] > 0) {
+                loop++;
+            }
+            if (loop == 2) {
+                System.out.println("The second posivite number is: " + secondPositive[i]);
+            }
+
+            if (secondPositive[i] < min) {
+                arrayMin = secondPositive[i];
+                min = i;
+            }
+            if (secondPositive[i] % 2 == 0) {
+                evenNumb *= secondPositive[i];
+            }
+            i++;
+        }
+        System.out.println("The product of even numbers is: " + evenNumb);
+        System.out.println("The min element is: " + arrayMin + " and it's position is: " + ++min);
     }
 }
