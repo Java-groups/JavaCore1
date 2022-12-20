@@ -18,7 +18,7 @@ public class Employee
 
 	public Employee(BufferedReader br, String emp_type) throws IOException
 	{
-		createDogInstanceList(br, emp_type);
+		createEmployeeInstanceList(br, emp_type);
 	}
 
 	public Employee(String name) 
@@ -51,7 +51,7 @@ public class Employee
 		this.salary = salary;
 	}
 
-	protected static void createDogInstanceList(BufferedReader br, String employee_type) throws IOException
+	protected static void createEmployeeInstanceList(BufferedReader br, String employee_type) throws IOException
 	{
 		String  in_employee_name;
 		double  in_emp_salary;
