@@ -1,6 +1,6 @@
-package com.softserve.hw4.dog.service;
+package com.softserve.hw3.dog.service;
 
-import com.softserve.hw4.dog.model.Dog;
+import com.softserve.hw3.dog.model.Dog;
 
 public class DogService {
     public boolean compareDogNames(Dog[] dogs) {

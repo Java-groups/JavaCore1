@@ -1,4 +1,4 @@
-package com.softserve.practicaltask.pt4;
+package com.softserve.practicaltask.pt3;
 
 public class Product {
     public static void main(String[] args) {

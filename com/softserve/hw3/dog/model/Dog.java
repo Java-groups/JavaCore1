@@ -1,4 +1,4 @@
-package com.softserve.hw4.dog.model;
+package com.softserve.hw3.dog.model;
 
 import java.util.Objects;
 

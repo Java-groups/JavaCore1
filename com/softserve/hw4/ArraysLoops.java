@@ -1,4 +1,4 @@
-package com.softserve.hw5;
+package com.softserve.hw4;
 
 import java.io.BufferedReader;
 import java.io.IOException;

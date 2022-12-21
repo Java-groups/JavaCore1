@@ -1,8 +1,8 @@
-package com.softserve.hw4.dog;
+package com.softserve.hw3.dog;
 
-import com.softserve.hw4.dog.model.Breed;
-import com.softserve.hw4.dog.model.Dog;
-import com.softserve.hw4.dog.service.DogService;
+import com.softserve.hw3.dog.model.Breed;
+import com.softserve.hw3.dog.model.Dog;
+import com.softserve.hw3.dog.service.DogService;
 
 import java.io.BufferedReader;
 import java.io.IOException;

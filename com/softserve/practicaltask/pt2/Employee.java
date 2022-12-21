@@ -1,4 +1,4 @@
-package com.softserve.practicaltask.pt3;
+package com.softserve.practicaltask.pt2;
 
 public class Employee {
 
