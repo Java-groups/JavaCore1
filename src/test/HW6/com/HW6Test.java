@@ -21,7 +21,7 @@ public class HW6Test {
 
     @Test
     public void getFloors(){
-        liner.setFloors(7);
+        liner.setFloors(5);
         assertTrue(liner.getFloors() == 5);
 
     }
