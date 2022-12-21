@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class CarService extends Car{
-//    Car car = new Car();
+public class CarService extends Car {
 
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
