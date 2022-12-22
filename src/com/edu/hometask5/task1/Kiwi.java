@@ -1,4 +1,4 @@
-package com.edu.hometask5;
+package com.edu.hometask5.task1;
 
 
 public class Kiwi extends NonFlyingBird {
@@ -10,7 +10,7 @@ public class Kiwi extends NonFlyingBird {
 
     @Override
     public String toString() {
-        return "Kiwi: " + run + ", " + smallWings + ", " + feathers + ", " + layEggs + ';';
+        return "Kiwi: " + run + ", " + getSmallWings() + ", " + getFeathers() + ", " + getLayEggs() + ';';
 
     }
 }

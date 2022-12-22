@@ -1,4 +1,4 @@
-package com.edu.hometask5;
+package com.edu.hometask5.task1;
 
 
 public class BirdStarter {

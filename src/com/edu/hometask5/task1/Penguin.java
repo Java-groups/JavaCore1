@@ -1,4 +1,4 @@
-package com.edu.hometask5;
+package com.edu.hometask5.task1;
 
 
 public class Penguin extends NonFlyingBird {
@@ -10,7 +10,7 @@ public class Penguin extends NonFlyingBird {
 
     @Override
     public String toString() {
-        return "Penguin: " + swim + ", " + smallWings + ", "  + feathers + ", " + layEggs+";";
+        return "Penguin: " + swim + ", " + getSmallWings() + ", "  + getFeathers() + ", " + getLayEggs()+";";
 
     }
 }

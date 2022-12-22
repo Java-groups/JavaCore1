@@ -1,4 +1,4 @@
-package com.edu.hometask5;
+package com.edu.hometask5.task1;
 
 
 public class Eagle extends FlyingBird {
@@ -10,7 +10,7 @@ public class Eagle extends FlyingBird {
 
     @Override
     public String toString() {
-        return "Eagle: "+ predator +", " + bigWings +", " + feathers + ", " + layEggs + ';';
+        return "Eagle: "+ predator +", " + getBigWings() +", " + getFeathers() + ", " + getLayEggs() + ';';
 
     }
 }

@@ -1,8 +1,7 @@
-package com.edu.hometask5;
+package com.edu.hometask5.task1;
 
 public class Swallow extends FlyingBird {
     private String notPredatory = "Is not predator";
-
 
     public Swallow() {
         super();
@@ -10,6 +9,6 @@ public class Swallow extends FlyingBird {
 
     @Override
     public String toString() {
-        return "Swallow: " + notPredatory + ", " + bigWings  + ", " + feathers + ", " + layEggs + ';';
+        return "Swallow: " + notPredatory + ", " + getBigWings() + ", " + getFeathers() + ", " + getLayEggs() + ';';
     }
 }
