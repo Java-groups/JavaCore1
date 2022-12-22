@@ -27,7 +27,6 @@ public class ContractEmployee extends Employee implements Payment{
         this.federalTaxIdmember = federalTaxIdmember;
         this.rate = rate;
         this.hours = hours;
-        super.setSalary(calculatePay());
     }
 
     @Override
