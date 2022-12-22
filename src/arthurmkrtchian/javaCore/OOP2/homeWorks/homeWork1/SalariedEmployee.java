@@ -23,7 +23,6 @@ public class SalariedEmployee extends Employee implements Payment{
         super(name);
         this.socialSecurityNumber = socialSecurityNumber;
         this.fixedPayment = fixedPayment;
-        super.setSalary(calculatePay());
     }
 
     @Override

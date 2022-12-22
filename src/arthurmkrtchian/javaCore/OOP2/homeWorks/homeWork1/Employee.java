@@ -15,25 +15,12 @@ package arthurmkrtchian.javaCore.OOP2.homeWorks.homeWork1;
 //        Arrange the entire sequence of workers descending the average monthly wage.
 //        Output the employee ID, name, and the average monthly wage for all elements of the list.
 
-// Намагався правильно визначити модифікатори доступу. І не для всіх полів реалізував сеттери. Все начебто логічно вийшло.
-
-
-
 
 public class Employee implements Comparable<Employee>{
 
     private String name;
     static int employeesCount;
     private final String employeeId; // this field generates automatically.
-    private double salary;
-
-    public double getSalary() {
-        return salary;
-    }
-
-    protected void setSalary(double salary) {
-        this.salary = salary;
-    }
 
     public Employee(String name) {
         this.name = name;
@@ -58,6 +45,13 @@ public class Employee implements Comparable<Employee>{
 
     @Override
     public int compareTo(Employee o) {
-        return (int) (o.salary- this.salary);
+        double s1 = 0;
+        double s2 = 0;
+
+        if (o instanceof Payment && this instanceof Payment){
+            s1 = ((Payment) o).calculatePay();
+            s2 = ((Payment) this).calculatePay();
+        }
+        return (int) (s1-s2);
     }
 }
