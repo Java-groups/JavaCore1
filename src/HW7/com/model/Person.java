@@ -1,11 +1,11 @@
-package HW7.com;
+package HW7.com.model;
 
 public abstract class Person {
     public Person() {
 
     }
 
-    protected class FullName {
+    public class FullName {
         private String firstName;
         private String lastName;
 

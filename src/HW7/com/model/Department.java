@@ -1,10 +1,10 @@
-package HW7.com;
+package HW7.com.model;
 
 public class Department implements Cloneable{
     private  String name;
 
     private Adress adress;
-    class Adress implements Cloneable{
+    public class Adress implements Cloneable{
         private String city;
         private String street;
         private int building;
@@ -35,7 +35,7 @@ public class Department implements Cloneable{
         }
 
         @Override
-        protected Object clone() throws CloneNotSupportedException {
+        public Object clone() throws CloneNotSupportedException {
             Adress copyOfAdress = (Adress) super.clone();
 
             return copyOfAdress;
@@ -69,7 +69,7 @@ public class Department implements Cloneable{
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         Department copyOfDepartment = (Department) super.clone();
         copyOfDepartment.adress = (Adress) copyOfDepartment.getAdress().clone();
         return copyOfDepartment;
