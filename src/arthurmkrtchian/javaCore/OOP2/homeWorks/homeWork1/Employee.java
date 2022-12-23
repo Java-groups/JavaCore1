@@ -45,7 +45,7 @@ public class Employee implements Comparable<Employee>{
 
     @Override
     public int compareTo(Employee o) {
-        
+
         if (o instanceof Payment && this instanceof Payment){
             return (int) (((Payment) o).calculatePay() -  ((Payment) this).calculatePay());
         }
