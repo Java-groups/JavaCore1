@@ -24,10 +24,10 @@ public class MainPerson implements Cloneable {
         copyOfStudent.setCourse(4);
         System.out.println("Clone modified: " + copyOfStudent);
 
-        List<String> student = new ArrayList<>();
-        student.add(String.valueOf(student1));
-        student.add(String.valueOf(student2));
-        student.add(String.valueOf(copyOfStudent));
+        List<Person> student = new ArrayList<>();
+        student.add(student1);
+        student.add(student2);
+        student.add(copyOfStudent);
         System.out.println();
 
         for (int i = 0; i < student.size(); i++) {
