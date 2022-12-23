@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author klimovych
- *
- */
-module HomeWorks {
-}

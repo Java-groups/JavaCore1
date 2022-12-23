@@ -1,6 +1,6 @@
 package HW3.task1;
 	
-enum HTTPError {
+public enum HTTPError {
 	BAD_REQUEST(400),
     UNAUTHORIZED(401),
     PAYMENT_REQUIRED(402),
