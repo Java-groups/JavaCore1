@@ -23,7 +23,9 @@ public class Application {
                 System.out.print(car);
             }
         }
+        System.out.println();
         sort(cars);
+        System.out.println();
         System.out.print(Arrays.toString(cars));
     }
 
