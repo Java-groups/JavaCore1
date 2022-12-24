@@ -1,4 +1,4 @@
-package arthurmkrtchian.javaCore.collections1.homeWorks.homework;
+package arthurmkrtchian.javaCore.collections1.homeWorks.homeWork;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,10 +51,18 @@ public class CollectionsX {
     }
 
     public static boolean removeLastEven(List<Integer> list){
-        if ((list.get(list.size()-1) % 2) == 0){
+        if (((list.get(list.size()-1) % 2) == 0) && (list.get(list.size()-1) != 0)){                       //24.12 added check for not zero
             list.remove(list.size()-1);
             return true;
         }
         return false;
+    }
+
+    public static List<Integer> cloneList(List<Integer> copyOf){
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < copyOf.size(); i++) {
+            result.add(copyOf.get(i));
+        }
+        return result;
     }
 }

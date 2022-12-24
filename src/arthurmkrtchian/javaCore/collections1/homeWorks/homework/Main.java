@@ -1,4 +1,4 @@
-package arthurmkrtchian.javaCore.collections1.homeWorks.homework;
+package arthurmkrtchian.javaCore.collections1.homeWorks.homeWork;
 
 //        Declare collection myCollection of 10 integers and fill it (from the console or random).
 //        • Swap the maximum and minimum elements in the list.
@@ -57,8 +57,13 @@ public class Main {
         //Copy the first k elements of the myCollection to the list1, in direct order, and the rest to the
         //list2 in reverse order.
         List<Integer> list1 = myCollection.subList(0,myCollection.size()/2);
-        List<Integer> list2 = myCollection.subList(myCollection.size()/2, myCollection.size());
+        List<Integer> list2 = CollectionsX.cloneList(myCollection.subList(myCollection.size()/2, myCollection.size()));
         Collections.reverse(list2);
+
+        // Тут ще стало зрозуміло, що якщо ми робиьмо субліст із осноного ліста,
+        // то все одно ми тільки переносимо адреси об'єктів а не створюємо абсолютно новий лист.
+        // Як результат на момент написання цього коментарю я маю половину myCollection ліста в зворотньому порядку
+
         System.out.println("1st sublist of collection in right order:");
         collectionsX.printList(list1);
         System.out.println("2nd sublist of collection in reverse order:");
@@ -82,7 +87,7 @@ public class Main {
         int firstMinimumValue = myCollection.get(firstMinimumIndex);
         if (firstMinimumIndex != myCollection.size()-1){
             myCollection.remove((int) firstMinimumIndex); //It is for sure :)
-            System.out.printf("Removed the first minimum from collection. Position: %d, Value: %d\n", firstMinimumIndex +1, firstMinimumValue);
+            System.out.printf("Removed the minimum from collection. Position was: %d, Value was: %d\n", firstMinimumIndex +1, firstMinimumValue);
             CollectionsX.printList(myCollection);
         } else {
             System.out.println("Nothing removed...");
