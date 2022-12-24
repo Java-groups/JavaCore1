@@ -1,4 +1,4 @@
-package HM7;
+package HM7.Task1;
 
 public class FullName {
     private String firstName, lastName;

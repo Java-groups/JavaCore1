@@ -1,4 +1,4 @@
-package HM7;
+package HM7.Task1;
 
 public abstract class Person {
     int age;
