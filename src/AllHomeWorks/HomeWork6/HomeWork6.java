@@ -1,6 +1,7 @@
 package AllHomeWorks.HomeWork6;
 
 import AllHomeWorks.HomeWork6.Task1.Task1;
+import AllHomeWorks.HomeWork6.Task2.Task2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,6 +23,7 @@ public class HomeWork6 {
 
             switch (x) {
                 case 1 -> Task1.doTask(br);
+                case 2 -> Task2.doTask(br);
 
                 case 0 -> {
                 }
