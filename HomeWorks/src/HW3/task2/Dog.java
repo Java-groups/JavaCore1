@@ -59,23 +59,22 @@ public class Dog {
     }
     
     public List<Dog> findMatches(List<Dog> dogs, String name) {
-    	
-    	for (int i = 0; i < dogs.size(); i++) {
-    	    if (dogs.get(i).name == name) {
-	    	    sameDogsName.add(dogs.get(i)); } 
-    	    if (dogs.get(i).name != name) { 
-    	    	continue; }
-    	}
-		return sameDogsName;
+
+        for (int i = 0; i < dogs.size(); i++) {
+            if (dogs.get(i).name.equals(name)) {
+                sameDogsName.add(dogs.get(i));
+            }
+        }
+        return sameDogsName;
     }
     
     public List<Dog>  findOldest (List<Dog> dogs, Integer age) {
     	
     	for (int i = 0; i < dogs.size(); i++) {
     	    if (dogs.get(i).age == age) {
-	    	    sameDogsAge.add(dogs.get(i)); } 
-    	    if (dogs.get(i).age != age) { 
-    	    	continue; }
+	    	    sameDogsAge.add(dogs.get(i));
+	    	} 
+
     	    }
     	    return sameDogsAge;
     }
@@ -85,21 +84,19 @@ public class Dog {
 		return Objects.hash(age, breed, name, sameDogsAge, sameDogsName);
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Dog other = (Dog) obj;
-		return Objects.equals(age, other.age) && breed == other.breed && Objects.equals(name, other.name)
-				&& Objects.equals(sameDogsAge, other.sameDogsAge) && Objects.equals(sameDogsName, other.sameDogsName);
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Dog otherDog = (Dog) obj;
+
+        if(name != this.name) return false;
+
+        return name.equals(otherDog.name);
+    }
 
 	@Override
     public String toString() {
-    	return " Name: " + getName().toUpperCase() + " \n Breed: " + getBreed() + " \n Age: " + getAge() + " YEARS\n";
+    	return "\n Name: " + getName().toUpperCase() + " \n Breed: " + getBreed() + " \n Age: " + getAge() + " YEARS\n";
     }
 }

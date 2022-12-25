@@ -18,22 +18,18 @@ public class Main {
 		    dogs.add(new Dog ("Vader", Dog.Breeds.BULLMASTIFF, 6));
 		    dogs.add(new Dog ("Lolly", Dog.Breeds.AKITA, 6));
 		    dogs.add(new Dog ("Jack", Dog.Breeds.BORDER_COLLIE, 11));
-
-/*  An issue i need to resolve:
- *      When i'm trying to enter dogs name by using BufferedReader it doesn't
- *      work. When I put the name by myself directly in the method everything
- *      works */
 		    
-		System.out.println("Lets find all dogs with name 'Jack'!\n");
-		String name = "Jack";
-    	System.out.println("The next dogs have name '" + name + "': \n");
+		System.out.print("\nEnter dogs name: ");
+		String name = br.readLine();
+    	System.out.println("\nThe next dogs have name '" + name + "': \n");
     	
     	dog.findMatches(dogs, name);
 		System.out.println(dog.sameDogsName);
 		
-		System.out.println("Enter dogs age: ");
+		System.out.print("\nEnter dogs age: ");
 		int age = Integer.parseInt(br.readLine());
-		System.out.println("The next dogs are with age '" + age + "': \n");
+		System.out.println("\nThe next dogs are " + age + " years old: \n");
+		
 		dog.findOldest(dogs, age);
 		System.out.println(dog.sameDogsAge);
     
