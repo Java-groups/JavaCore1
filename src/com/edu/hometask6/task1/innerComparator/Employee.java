@@ -2,7 +2,7 @@ package com.edu.hometask6.task1.innerComparator;
 
 import java.util.Comparator;
 
-public class Employee implements Comparable<Employee> {
+public abstract class Employee implements Comparable<Employee> {
     private int employeeId;
     private int averageMonthSalary;
 
