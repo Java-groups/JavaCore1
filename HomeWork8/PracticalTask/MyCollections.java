@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class MyCollections {
-    private LinkedList<Integer> myCollection =new LinkedList<>(List.of(1,5,21,4,1,6,11,2,4,15));
+    private ArrayList<Integer> myCollection =new ArrayList<>(10);
 
     private ArrayList<Integer> newCollection = new ArrayList<>();
 
-    /*
-    private void randomNumbers(){
-    myCollection.add(new Random().nextInt(10));
+
+    public void randomNumbers(){
         for (int i = 0;i < 10;i++){
-            myCollection.add(new Random().nextInt(10));
+            myCollection.add(i);
+            System.out.println(myCollection.get(i));
         }
-    } */
+    }
 
 
     public void outputNumberMoreFive() {
@@ -40,7 +41,7 @@ public class MyCollections {
 
     public void replacementIndex(){
         myCollection.add(2,1);
-        myCollection.add(8,-3);
+        myCollection.add(8, -3);
         myCollection.add(5,-4);
 
         for (int i = 0;i<myCollection.size();i++){
