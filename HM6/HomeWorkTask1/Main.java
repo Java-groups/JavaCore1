@@ -13,17 +13,25 @@ package HM6.HomeWorkTask1;
 //        Output the employee ID, name, and the average monthly wage for all elements of the list.
 
 
-//import java.util.Arrays;
-//
-//public class Main {
-//    public static void main(String[] args) {
-//        Employee[] employees = {
-//                new ContractEmployee("563B","Petro", 5600),
-//                new ContractEmployee("289C","Anna", 4580),
-//                new SalariedEmployee("58H3", "Anton", 15, 160),
-//                new SalariedEmployee("23H3", "Vitalii", 23, 176),
-//        };
-//        Arrays.sort(employees);
-//        System.out.println(Arrays.toString(employees));
-//    }
-//}
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        Employee1[] employee1s = {
+                new ContractEmployee1("563B","Petro", 5600),
+                new ContractEmployee1("289C","Anna", 4580),
+                new SalariedEmployee1("58H3", "Anton", 15, 160),
+                new SalariedEmployee1("23H3", "Vitalii", 23, 176),
+        };
+
+        for (int i = 0; i < employee1s.length; i++) {
+            System.out.println(employee1s[i].toString() + "; Salary: $" + employee1s[i].calculatePay());
+        }
+        System.out.println();
+
+        Arrays.sort(employee1s);
+        for (int i = 0; i < employee1s.length; i++) {
+            System.out.println(employee1s[i].toString() + "; Salary: $" + employee1s[i].calculatePay());
+        }
+    }
+}
