@@ -1,5 +1,5 @@
 package HW3.task1;
-	
+
 public enum HTTPError {
 	BAD_REQUEST(400),
     UNAUTHORIZED(401),
@@ -22,9 +22,16 @@ public enum HTTPError {
 	}
     
 	public static void main(String[] args) {
-		for (HTTPError httper : HTTPError.values())
-			System.out.println(httper + " " + httper.errorNumber);
+		getError(402);
 	}
 	
+	public static String getError(int number) {
+		String answer = null;
+		for (HTTPError error : HTTPError.values())
+			if (error.errorNumber == number) {
+				answer = error.name();
+			    System.out.println("Error '" + number + "' --> " + error);
+			    } 
+		return answer;
+	} 
 }
-   

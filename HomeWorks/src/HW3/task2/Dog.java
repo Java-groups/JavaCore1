@@ -1,8 +1,12 @@
 package HW3.task2;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 public class Dog {
 
-    enum Breeds {
+    public enum Breeds {
     	AMERICAN_BULDOG,
     	EIREDALE_TERRIER,
     	AKITA,
@@ -16,11 +20,11 @@ public class Dog {
     	CANE_CORSO;
     }
     
-    private Breeds breed;
-	private String name;
-	private Integer age;
-	public  String resultName;
-	public String resultAge;
+    public Breeds breed;
+	public String name;
+	public Integer age;
+	public List<Dog> sameDogsAge = new ArrayList<>();
+	public List<Dog> sameDogsName = new ArrayList<>();
 	
 	public Dog() {}
 	
@@ -54,36 +58,48 @@ public class Dog {
         this.age = age;
     }
     
-    public void findMatches(Dog dog1, Dog dog2) {
+    public List<Dog> findMatches(List<Dog> dogs, String name) {
     	
-    	if (dog1.name.equals(dog2.name)) {
-	    	  this.resultName = "The next dogs have the same name:\n\n" + dog1.toString() + "\n" + dog2.toString();
-	    } else this.resultName = "No matches found";
+    	for (int i = 0; i < dogs.size(); i++) {
+    	    if (dogs.get(i).name == name) {
+	    	    sameDogsName.add(dogs.get(i)); } 
+    	    if (dogs.get(i).name != name) { 
+    	    	continue; }
+    	}
+		return sameDogsName;
     }
     
-    public void findOldest (Dog dog1, Dog dog2) {
-    	if (dog1.age < dog2.age) { 
-    		this.resultAge = "The oldest dog is:\n" + dog1.toString();
-	    } else if (dog1.age > dog2.age) {
-	        this.resultAge = "The oldest dog is:\n" + dog2.toString();
-	    } else this.resultAge = "Dogs are the same age!";
+    public List<Dog>  findOldest (List<Dog> dogs, Integer age) {
+    	
+    	for (int i = 0; i < dogs.size(); i++) {
+    	    if (dogs.get(i).age == age) {
+	    	    sameDogsAge.add(dogs.get(i)); } 
+    	    if (dogs.get(i).age != age) { 
+    	    	continue; }
+    	    }
+    	    return sameDogsAge;
     }
     
     @Override
+	public int hashCode() {
+		return Objects.hash(age, breed, name, sameDogsAge, sameDogsName);
+	}
+
+	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		Dog dog = (Dog)obj;
-		if (getClass() != obj.getClass()) return false;
-		if (name == null) {
-			if (dog.getName() != null) return false;
-		} else if (!name.equals(dog.getName()))return false;
-		return true;
-		}
-    
-    @Override
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Dog other = (Dog) obj;
+		return Objects.equals(age, other.age) && breed == other.breed && Objects.equals(name, other.name)
+				&& Objects.equals(sameDogsAge, other.sameDogsAge) && Objects.equals(sameDogsName, other.sameDogsName);
+	}
+
+	@Override
     public String toString() {
     	return " Name: " + getName().toUpperCase() + " \n Breed: " + getBreed() + " \n Age: " + getAge() + " YEARS\n";
     }
-   
 }
