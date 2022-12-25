@@ -1,19 +1,14 @@
-package edu.homeworks.hw8.homework8;
+package edu.homeworks.hw8.practicaltask;
 
-
-import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        MyCollection myCollection = new MyCollection();
-        myCollection.randomNumbers();
-        myCollection.swapMinMax();
-        myCollection.addZero();
-        myCollection.swapElements();
-        myCollection.copyElementsToLists();
-        myCollection.removeLastEvenElement();
-        myCollection.removeLastMinimalElement();
-
+        MyCollections myCollections = new MyCollections();
+        myCollections.randomNumbers();
+        myCollections.outputNumberMoreFive();
+        myCollections.removeNumbers();
+        myCollections.replacementIndex();
+        myCollections.sortArray();
 
     }
 }

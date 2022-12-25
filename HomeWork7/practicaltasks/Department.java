@@ -23,12 +23,13 @@ public class Department implements Cloneable{
     @Override
     protected Department clone() throws CloneNotSupportedException {
         Department copyDep = (Department) super.clone();
+        copyDep.address = (Address) super.clone();
         return copyDep;
     }
 }
 
 
-     class Address{
+     class Address implements Cloneable{
         private String city;
         private String street;
         private int building;
@@ -56,5 +57,11 @@ public class Department implements Cloneable{
 
         public void setBuilding(int building) {
             this.building = building;
+        }
+
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            return super.clone();
         }
 }
