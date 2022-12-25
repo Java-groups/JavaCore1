@@ -19,7 +19,7 @@ public class Car extends GroundVehicle{
 
     @Override
     void drive() {
-        if (!model.equals(" ")){
+        if (!model.isEmpty()){
             isDriving = true;
         }
     }

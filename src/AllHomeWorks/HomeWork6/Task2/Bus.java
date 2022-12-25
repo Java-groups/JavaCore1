@@ -11,7 +11,7 @@ public class Bus extends GroundVehicle{
 
     @Override
     void drive() {
-        if (!route.equals(" ")){
+        if (!route.isEmpty()){
             isDriving = true;
         }
     }

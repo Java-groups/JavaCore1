@@ -16,6 +16,6 @@ abstract class Passengers {
     }
 
     public String toString() {
-        return String.format("Passengers count: %s", getPassengers());
+        return String.format("%s: passengers count: %s", this.getClass().getSimpleName(), getPassengers());
     }
 }
