@@ -1,6 +1,6 @@
 package com.softserve.hw5_oop1.birds.flyingbirds;
 
-import com.softserve.hw5_oop1.Bird;
+import com.softserve.hw5_oop1.birds.Bird;
 
 public class FlyingBird extends Bird {
 

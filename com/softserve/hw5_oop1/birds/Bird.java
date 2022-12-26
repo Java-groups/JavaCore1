@@ -1,4 +1,4 @@
-package com.softserve.hw5_oop1;
+package com.softserve.hw5_oop1.birds;
 
 public abstract class Bird {
 
