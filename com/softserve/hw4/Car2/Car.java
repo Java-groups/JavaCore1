@@ -7,7 +7,6 @@ public class Car {
     static final int CAR_TYPES_COUNT = 3;
 
     public Car() {}
-    public Car(String type, double engineCapacity, int productionYear) {}
 
     public String getType() {
         return type;
@@ -33,4 +32,12 @@ public class Car {
         this.engineCapacity = engineCapacity;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "type='" + type + '\'' +
+                ", productionYear=" + productionYear +
+                ", engineCapacity=" + engineCapacity +
+                '}';
+    }
 }
