@@ -44,24 +44,26 @@ public class CollectionsX {
                 indexes.add(i+1);
             }
         }
-        for (int i = 0; i < indexes.size(); i++) {
-            list.add(indexes.get(i) + zeros, 0);
+        for (Integer index : indexes) {
+            list.add(index + zeros, 0);
             zeros++;
         }
     }
 
     public static boolean removeLastEven(List<Integer> list){
-        if (((list.get(list.size()-1) % 2) == 0) && (list.get(list.size()-1) != 0)){                       //24.12 added check for not zero
-            list.remove(list.size()-1);
-            return true;
+        for (int i = list.size()-1; i <= 0; i++) {
+            if (list.get(i) % 2 == 0){
+                list.remove(list.get(i));
+                return true;
+            }
         }
         return false;
     }
 
     public static List<Integer> cloneList(List<Integer> copyOf){
         List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < copyOf.size(); i++) {
-            result.add(copyOf.get(i));
+        for (Integer integer : copyOf) {
+            result.add(integer);
         }
         return result;
     }
