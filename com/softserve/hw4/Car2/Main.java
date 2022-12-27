@@ -7,5 +7,6 @@ public class Main {
         CarService cs = new CarService();
         cs.inputCarInfo();
         cs.outputCarInfo();
+        cs.certainModelYear();
     }
 }

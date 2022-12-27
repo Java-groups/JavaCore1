@@ -3,6 +3,7 @@ package com.softserve.hw4.Car2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class CarService extends Car {
 
@@ -34,17 +35,17 @@ public class CarService extends Car {
         }
     }
 
+    public void certainModelYear() throws IOException {
+        int inputProductionYear;
+        System.out.println("Input model production year: ");
+        inputProductionYear = Integer.parseInt(input.readLine());
+        for (int i = 0; i < CAR_TYPES_COUNT; i++) {
+            if (car[i].getProductionYear() == inputProductionYear) {
+                System.out.println("Car by year: " + car[i]);
+                break;
+            }
+        }
+    }
+//    System.out.println("Cars sorted by year of production: " + toString());
 
-//
-//    public void objectCarInfo() {
-//        Car[] car = new Car[CAR_TYPES_COUNT];
-//        for (int i = 0; i < CAR_TYPES_COUNT; i++) {
-//            Car carInfo = new Car();
-//            carInfo.setType(getType());
-//            carInfo.setEngineCapacity(getEngineCapacity());
-//            carInfo.setProductionYear(getProductionYear());
-//
-//            car[i] = carInfo;
-//        }
-//    }
 }
