@@ -1,5 +1,12 @@
 package com.softserve.hw6_oop2;
 
 public class Employee {
-    private String employeeId;
+
+    protected String name;
+    protected String employeeId;
+
+    public Employee(String name, String employeeId) {
+        this.name = name;
+        this.employeeId = employeeId;
+    }
 }
