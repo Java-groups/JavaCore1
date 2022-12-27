@@ -10,6 +10,7 @@ import AllHomeWorks.HomeWork6.HomeWork6;
 import AllHomeWorks.HomeWork6Practical.Homework6Practical;
 import AllHomeWorks.HomeWork8.HomeWork8;
 import AllHomeWorks.HomeWork8Practical.HomeWork8Practical;
+import AllHomeWorks.HomeWork9.HomeWork9;
 import AllHomeWorks.HomeWork9Practical.HomeWork9Practical;
 import AllHomeWorks.Homework4.Homework4;
 import AllHomeWorks.Homework4Practical.Homework4Practical;
@@ -41,7 +42,7 @@ public class AllHomeWorks {
                 System.out.println("14. Homework #8. Practical");
                 System.out.println("15. Homework #8.");
                 System.out.println("16. Homework #9. Practical");
-//                System.out.println("17. Homework #9.");
+                System.out.println("17. Homework #9.");
 
 
 
@@ -68,7 +69,7 @@ public class AllHomeWorks {
                     case 14 -> HomeWork8Practical.doTask(br);
                     case 15 -> HomeWork8.doTask(br);
                     case 16 -> HomeWork9Practical.doTask(br);
-//                    case 17 -> HomeWork9.doTask(br);
+                    case 17 -> HomeWork9.doSelectTask(br);
 
 
 
