@@ -9,5 +9,6 @@ public class Main {
         cs.outputCarInfo();
         cs.certainModelYear();
         cs.sortByYear();
+        cs.outputCarInfo();
     }
 }

@@ -4,7 +4,6 @@ public class Car {
     private String type;
     private int productionYear;
     private double engineCapacity;
-    static final int CAR_TYPES_COUNT = 3;
 
     public Car() {}
 

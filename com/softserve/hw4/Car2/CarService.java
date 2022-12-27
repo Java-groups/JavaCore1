@@ -3,35 +3,33 @@ package com.softserve.hw4.Car2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
-public class CarService extends Car {
+public class CarService {
+
+    static final int CAR_TYPES_COUNT = 3;
 
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
-    Car[] car = new Car[CAR_TYPES_COUNT];
+    Car[] cars = new Car[CAR_TYPES_COUNT];
 
     public void inputCarInfo() throws IOException {
         for (int i = 0; i < CAR_TYPES_COUNT; i++) {
+            Car car = new Car();
+
             System.out.println("Input car type: ");
-            setType(input.readLine());
+            car.setType(input.readLine());
             System.out.println("Input production year: ");
-            setProductionYear(Integer.parseInt(input.readLine()));
+            car.setProductionYear(Integer.parseInt(input.readLine()));
             System.out.println("Input engine capacity: ");
-            setEngineCapacity(Double.parseDouble(input.readLine()));
+            car.setEngineCapacity(Double.parseDouble(input.readLine()));
 
-            Car carInfo = new Car();
-            carInfo.setType(getType());
-            carInfo.setEngineCapacity(getEngineCapacity());
-            carInfo.setProductionYear(getProductionYear());
-
-            car[i] = carInfo;
+            cars[i] = car;
         }
     }
 
     public void outputCarInfo() {
         for (int i = 0; i < CAR_TYPES_COUNT; i++) {
-            System.out.println("Car info: " + car[i]);
+            System.out.println("Car info: " + cars[i]);
         }
     }
 
@@ -40,8 +38,8 @@ public class CarService extends Car {
         System.out.println("Input model production year: ");
         inputProductionYear = Integer.parseInt(input.readLine());
         for (int i = 0; i < CAR_TYPES_COUNT; i++) {
-            if (car[i].getProductionYear() == inputProductionYear) {
-                System.out.println("Car by year: " + car[i]);
+            if (cars[i].getProductionYear() == inputProductionYear) {
+                System.out.println("Car by year: " + cars[i]);
                 break;
             }
         }
@@ -49,12 +47,15 @@ public class CarService extends Car {
 
     public void sortByYear() {
         System.out.println("Cars sorted by year of production: ");
-        int maxYear = car[0].getProductionYear();
-        for (int i = 1; i < CAR_TYPES_COUNT; i++) {
-            if (car[i].getProductionYear() < maxYear) {
-                car[i].setProductionYear(maxYear);
+        Car tmp;
+        for (int i = 0; i < cars.length - 1; i++) {
+            for (int j = i + 1; j < cars.length; j++) {
+                if (cars[i].getProductionYear() > cars[j].getProductionYear()) {
+                    tmp = cars[i];
+                    cars[i] = cars[j];
+                    cars[j] = tmp;
+                }
             }
         }
-        toString();
     }
 }
