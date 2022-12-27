@@ -4,9 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class UnionIntersect {
-    private Set<Integer> tmp;
+    private Set tmp;
 
-     public Set<Integer> union(Set<Integer> set1, Set<Integer> set2){
+     public Set union(Set set1, Set set2){
          tmp = new HashSet<Integer>();
         System.out.println("set1 = " + set1);
         System.out.println("set2 = " + set2);
@@ -17,7 +17,7 @@ public class UnionIntersect {
         return tmp;
     }
 
-     public Set<Integer> intersect(Set<Integer> set1,Set<Integer> set2){
+     public Set intersect(Set set1,Set set2){
          tmp = new HashSet<Integer>();
         System.out.println("set1 = " + set1);
         System.out.println("set2 = " + set2);
