@@ -46,6 +46,15 @@ public class CarService extends Car {
             }
         }
     }
-//    System.out.println("Cars sorted by year of production: " + toString());
 
+    public void sortByYear() {
+        System.out.println("Cars sorted by year of production: ");
+        int maxYear = car[0].getProductionYear();
+        for (int i = 1; i < CAR_TYPES_COUNT; i++) {
+            if (car[i].getProductionYear() < maxYear) {
+                car[i].setProductionYear(maxYear);
+            }
+        }
+        toString();
+    }
 }
