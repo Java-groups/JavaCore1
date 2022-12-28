@@ -76,7 +76,7 @@ public class Student implements Comparator<Student> {
         this.course = course;
     }
 
-    public static List<Student> printStudents(List<Student> students, Integer course) {
+    public static void printStudents(List<Student> students, Integer course) {
         ListIterator<Student> studentIterator = students.listIterator();
         while (studentIterator.hasNext()) {
             Student student = studentIterator.next();
@@ -84,14 +84,6 @@ public class Student implements Comparator<Student> {
                 System.out.println(student.getName());
             }
         }
-
-//        for (int i = 0; i < students.size(); i++) {
-//            if (students.get(i).getCourse() == course) {
-//                System.out.println(students.get(i).getName());
-//            }
-//        }
-        return students;
-
     }
 
     public static void main(String[] args) {
