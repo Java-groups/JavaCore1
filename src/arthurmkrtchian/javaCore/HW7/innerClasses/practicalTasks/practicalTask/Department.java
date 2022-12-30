@@ -30,7 +30,9 @@ public class Department implements Cloneable{
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        Department copyOfDepartment = (Department) super.clone();
+        copyOfDepartment.address = (Address) copyOfDepartment.address.clone();
+        return copyOfDepartment;
     }
 
     @Override
@@ -51,7 +53,7 @@ public class Department implements Cloneable{
         this.address = address;
     }
 
-    public static class Address{
+     static class Address implements Cloneable{
         private String city;
         private String Street;
         private int building;
@@ -60,24 +62,16 @@ public class Department implements Cloneable{
             return city;
         }
 
-        public void setCity(String city) {
-            this.city = city;
-        }
+         public void setCity(String city) {
+             this.city = city;
+         }
 
-        public String getStreet() {
+         public String getStreet() {
             return Street;
-        }
-
-        public void setStreet(String street) {
-            Street = street;
         }
 
         public int getBuilding() {
             return building;
-        }
-
-        public void setBuilding(int building) {
-            this.building = building;
         }
 
         public Address(String city, String street, int building) {
@@ -85,5 +79,10 @@ public class Department implements Cloneable{
             Street = street;
             this.building = building;
         }
-    }
+
+         @Override
+         protected Object clone() throws CloneNotSupportedException {
+             return super.clone();
+         }
+     }
 }

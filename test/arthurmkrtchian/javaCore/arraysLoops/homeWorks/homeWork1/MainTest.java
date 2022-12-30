@@ -1,5 +1,7 @@
 package arthurmkrtchian.javaCore.arraysLoops.homeWorks.homeWork1;
 
+import arthurmkrtchian.javaCore.HW4.arraysLoops.homeWorks.homeWork1.Main;
+
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 

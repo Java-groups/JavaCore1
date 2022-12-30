@@ -1,5 +1,7 @@
 package arthurmkrtchian.javaCore.arraysLoops.homeWorks.homeWork4;
 
+import arthurmkrtchian.javaCore.HW4.arraysLoops.homeWorks.homeWork4.Car;
+import arthurmkrtchian.javaCore.HW4.arraysLoops.homeWorks.homeWork4.CarType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

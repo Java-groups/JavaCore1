@@ -26,7 +26,6 @@ public class Main {
         Department sDepartment = (Department) department.clone();
         sDepartment.setName("Department of Youth and Sports");
         sDepartment.setAddress(new Department.Address("Kyiv", "Bohdana Khmelnytskoho str", 7));
-
         departments[1] = sDepartment;
 
         Department cDepartment = (Department) department.clone();
