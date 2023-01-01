@@ -6,6 +6,7 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
+        
 		List<Passengers> vehicles = new ArrayList<>();
 
 		vehicles.add(new Liner(2500, 5));
