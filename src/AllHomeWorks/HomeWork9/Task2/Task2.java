@@ -29,7 +29,9 @@ public class Task2 {
         System.out.println("Please input name: ");
         String name = br.readLine();
         if (personMap.containsValue(name)) {
-            personMap.entrySet().stream()
+            personMap
+                    .entrySet()
+                    .stream()
                     .filter(entry -> Objects.equals(entry.getValue(), name))
                     .forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));
         } else {
@@ -39,16 +41,20 @@ public class Task2 {
         System.out.println("\nPlease input name: ");
         String name1 = br.readLine();
         if (personMap.containsValue(name1)) {
-            System.out.println("\nUser " + name1 +" " +personMap.entrySet().stream().filter(entry -> Objects.equals(entry.getValue(), name1)).findFirst().get().getKey() +" is ready to remove");
-            personMap.values().remove(name1);
+            System.out.println("\nUser " + name1 + " " + personMap.entrySet().stream().filter(entry -> Objects.equals(entry.getValue(), name1)).toList() + " is ready to remove");
+            personMap
+                    .entrySet()
+                    .stream()
+                    .filter(entry -> Objects.equals(entry.getValue(), name1))
+                    .toList()
+                    .forEach(entry -> personMap.remove(entry.getKey()));
             System.out.println("\nPersons after remove(): ");
             for (Map.Entry person : personMap.entrySet()) {
                 System.out.println(person.getKey() + " " +
                         person.getValue());
             }
 
-
-            } else {
+        } else {
             System.out.println("\nWe don't have name =(" + name1 + ")!");
         }
 
