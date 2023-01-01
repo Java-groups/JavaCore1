@@ -8,7 +8,7 @@ public class CollectionStarter {
         collections.fillMyCollection();
         collections.fillNewCollection();
         collections.removeMoreThan20();
-        collections.replaceElements();
+        collections.insertElements();
         collections.sortAndPrint();
     }
 }

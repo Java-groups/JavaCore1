@@ -15,7 +15,7 @@ public class Collection {
         for (int i = 0; i < 10; i++) {
             myCollection.add(new Random().nextInt(40));
         }
-        System.out.println("Mycollection: " + myCollection);
+        System.out.println("myCollection: " + myCollection);
     }
 
     public void fillNewCollection() {
@@ -32,10 +32,6 @@ public class Collection {
 
     }
 
-    /*Method "removeMoreThan20" below, works incorrect when numbers more than 20
-     follow each other, method leaves second number, can not find cause for mistakenly work.
-     Could you please advice?
-     */
     public void removeMoreThan20() {
 
         for (int i = 0; i < myCollection.size(); i++) {
@@ -43,6 +39,7 @@ public class Collection {
             if (myCollection.get(i) > 20) {
 
                 myCollection.remove(i);
+                i--;
             }
         }
 
@@ -50,31 +47,35 @@ public class Collection {
 
     }
 
-    public void replaceElements() {
+    public void insertElements() {
         int i;
         for (i = 0; i < myCollection.size(); i++) {
 
             if (myCollection.size() >= 3) {
-                myCollection.set(2, 1);
+                myCollection.add(2, 1);
 
             } else {
-                System.out.println("Can not set 1 to 3 position, size myCollection is: " + myCollection.size());
-                continue;
+                System.out.println("Can not add 1 to 3 position," +
+                        " actual size myCollection is: " + myCollection.size());
+
+                break;
             }
             if (myCollection.size() >= 6) {
-                myCollection.set(5, -4);
+                myCollection.add(5, -4);
 
             } else {
-                System.out.println("Can not set -4 to 6 position, size myCollection is: " + myCollection.size());
+                System.out.println("Can not add -4 to 6 position," +
+                        " actual size myCollection is: " + myCollection.size());
 
                 break;
             }
             if (myCollection.size() >= 9) {
-                myCollection.set(8, -3);
+                myCollection.add(8, -3);
 
             } else {
-                System.out.println("Can not set -3 to 9 position, size myCollection is: " + myCollection.size());
-                break;
+                System.out.println("Can not add -3 to 9 position," +
+                        " actual  size myCollection is: " + myCollection.size());
+               break;
             }
 
         }
