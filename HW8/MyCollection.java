@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class MyCollection {
     static ArrayList<Integer> create(Random rand) {
@@ -12,25 +9,13 @@ public class MyCollection {
         return integerArrayList;
     }
 
-    static int[] minMaxIndex(ArrayList<Integer> integerArrayList) {
-        int minIndex = 0;
-        int maxIndex = 0;
-        for (int i = 1; i < integerArrayList.size(); i++) {
-            if (integerArrayList.get(minIndex) < integerArrayList.get(i)) {
-                minIndex = i;
-            }
-            if (integerArrayList.get(maxIndex) > integerArrayList.get(i)) {
-                maxIndex = i;
-            }
-        }
-        return new int[]{minIndex, maxIndex};
-    }
-
     static void changeMinAndMax(ArrayList<Integer> integerArrayList) {
-        int[] minMaxIndex = MyCollection.minMaxIndex(integerArrayList);
-        int temp = integerArrayList.get(minMaxIndex[0]);
-        integerArrayList.set(minMaxIndex[0], integerArrayList.get(minMaxIndex[1]));
-        integerArrayList.set(minMaxIndex[1], temp);
+        int minIndex = integerArrayList.indexOf(Collections.min(integerArrayList));
+        int maxIndex = integerArrayList.indexOf(Collections.max(integerArrayList));
+
+        int temp = integerArrayList.get(minIndex);
+        integerArrayList.set(minIndex, integerArrayList.get(maxIndex));
+        integerArrayList.set(maxIndex, temp);
     }
 
     static void insertThreeRandom(ArrayList<Integer> integerArrayList, Random rand) {
@@ -71,16 +56,16 @@ public class MyCollection {
     }
 
     static void removeFollowFirstMin(ArrayList<Integer> integerArrayList) {
-        int[] minMaxIndex = MyCollection.minMaxIndex(integerArrayList);
+        int minIndex = integerArrayList.indexOf(Collections.min(integerArrayList));
         for (int i = 1; i < integerArrayList.size(); i++) {
-            if (integerArrayList.get(minMaxIndex[0]) > integerArrayList.get(i)) {
-                minMaxIndex[0] = i;
+            if (integerArrayList.get(minIndex) > integerArrayList.get(i)) {
+                minIndex = i;
             }
         }
-        if(minMaxIndex[0] == integerArrayList.size()) {
+        if(minIndex == integerArrayList.size()) {
             System.out.println("last element");
         } else {
-            integerArrayList.remove(minMaxIndex[0]+1);
+            integerArrayList.remove(minIndex+1);
         }
     }
 }
