@@ -10,21 +10,20 @@ public class Main {
         ArrayList<Integer> integerArrayList = MyCollection.create(rand);
         System.out.println("Initial ArrayList: "+integerArrayList);
 
-        ArrayList<Integer> minAndMaxChanged = MyCollection.changeMinAndMax(integerArrayList);
-        System.out.println("Changed min and max: "+minAndMaxChanged);
+        MyCollection.changeMinAndMax(integerArrayList);
+        System.out.println("Changed min and max: "+integerArrayList);
 
 
-        ArrayList<Integer> insertThreeRandom = MyCollection.insertThreeRandom(minAndMaxChanged, rand);
-        System.out.println("Insert 3 random before the first negative"+ insertThreeRandom);
+        MyCollection.insertThreeRandom(integerArrayList, rand);
+        System.out.println("Insert 3 random before the first negative"+ integerArrayList);
 
-        ArrayList<Integer> insertZero = MyCollection.insertZero(insertThreeRandom);
-        System.out.println("Insert a zero"+insertZero);
+        MyCollection.insertZero(integerArrayList);
+        System.out.println("Insert a zero"+integerArrayList);
 
-        List<Integer> firstPart = MyCollection.splitIntoTwo(insertZero).get(0);
-        List<Integer> secondPart = MyCollection.splitIntoTwo(insertZero).get(1);
-        Collections.reverse(secondPart);
-        System.out.println("First part"+firstPart.toString());
-        System.out.println("Second part reverse"+secondPart.toString());
+        List<List<Integer>> splitIntoTwo = MyCollection.splitIntoTwo(integerArrayList);
+        Collections.reverse(splitIntoTwo.get(1));
+        System.out.println("First part"+splitIntoTwo.get(0).toString());
+        System.out.println("Second part reverse"+splitIntoTwo.get(1).toString());
 
         MyCollection.removeLastIfEven(integerArrayList);
 

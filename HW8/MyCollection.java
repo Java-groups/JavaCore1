@@ -26,15 +26,14 @@ public class MyCollection {
         return new int[]{minIndex, maxIndex};
     }
 
-    static ArrayList<Integer> changeMinAndMax(ArrayList<Integer> integerArrayList) {
+    static void changeMinAndMax(ArrayList<Integer> integerArrayList) {
         int[] minMaxIndex = MyCollection.minMaxIndex(integerArrayList);
         int temp = integerArrayList.get(minMaxIndex[0]);
         integerArrayList.set(minMaxIndex[0], integerArrayList.get(minMaxIndex[1]));
         integerArrayList.set(minMaxIndex[1], temp);
-        return integerArrayList;
     }
 
-    static ArrayList<Integer> insertThreeRandom(ArrayList<Integer> integerArrayList, Random rand) {
+    static void insertThreeRandom(ArrayList<Integer> integerArrayList, Random rand) {
         for (Integer element : integerArrayList) {
             if (element < 0) {
                 for (int i = 0; i < 3; i++) {
@@ -43,17 +42,15 @@ public class MyCollection {
                 break;
             }
         }
-        return integerArrayList;
     }
 
-    static ArrayList<Integer> insertZero(ArrayList<Integer> integerArrayList) {
+    static void insertZero(ArrayList<Integer> integerArrayList) {
         for (int i = 0; i < integerArrayList.size() - 1; i++) {
             if ((integerArrayList.get(i) > 0) && (integerArrayList.get((i + 1)) < 0) || (integerArrayList.get(i) < 0) && (integerArrayList.get((i + 1)) > 0)) {
                 integerArrayList.add(i + 1, 0);
                 i++;
             }
         }
-        return integerArrayList;
     }
 
     static List<List<Integer>> splitIntoTwo(ArrayList<Integer> integerArrayList) {
@@ -73,7 +70,7 @@ public class MyCollection {
         System.out.println("There are no even elements");
     }
 
-    static ArrayList<Integer> removeFollowFirstMin(ArrayList<Integer> integerArrayList) {
+    static void removeFollowFirstMin(ArrayList<Integer> integerArrayList) {
         int[] minMaxIndex = MyCollection.minMaxIndex(integerArrayList);
         for (int i = 1; i < integerArrayList.size(); i++) {
             if (integerArrayList.get(minMaxIndex[0]) > integerArrayList.get(i)) {
@@ -85,6 +82,5 @@ public class MyCollection {
         } else {
             integerArrayList.remove(minMaxIndex[0]+1);
         }
-        return integerArrayList;
     }
 }
