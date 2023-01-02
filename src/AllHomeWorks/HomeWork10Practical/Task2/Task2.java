@@ -9,6 +9,7 @@ public class Task2 {
         System.out.println();
         System.out.println("Please input Surname, Name and Patronymic, or 0 - for exit:");
         String fullName = br.readLine();
+
         String space = " ";
         String name;
         String surname;
