@@ -18,14 +18,14 @@ public class Task2v2 {
         char firstLetterPatronymic;
 
         String[] words = fullName.split(space);
-        if (words.length != 3){
+        if (words.length != 3) {
             System.out.println("\n Waiting for your Full Name: Surname, Name, Patronymic");
         } else {
-                name = words[0];
-                surname = words[1];
-                patronymic = words[2];
-                firstLetterName = name.charAt(0);
-                firstLetterPatronymic = patronymic.charAt(0);
+            name = words[0];
+            surname = words[1];
+            patronymic = words[2];
+            firstLetterName = name.charAt(0);
+            firstLetterPatronymic = patronymic.charAt(0);
 
             System.out.printf("%s %s.%s.", surname, firstLetterName, firstLetterPatronymic);
             System.out.printf("\n %s", name);

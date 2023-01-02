@@ -16,7 +16,7 @@ public class HomeWork10Practical {
             System.out.println("1. About Substring");
             System.out.println("2. About Surname");
             System.out.println("3. About Surname, with split");
-//            System.out.println("4. About User name");
+            System.out.println("4. About User name");
 
             try {
                 x = Integer.parseInt(br.readLine());
@@ -28,7 +28,7 @@ public class HomeWork10Practical {
                 case 1 -> Task1.doTask(br);
                 case 2 -> Task2.doTask(br);
                 case 3 -> Task2v2.doTask(br);
-//                case 4 -> Task3.doTask(br);
+                case 4 -> Task3.doTask(br);
 
                 case 0 -> {
                 }
