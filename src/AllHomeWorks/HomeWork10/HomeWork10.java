@@ -11,7 +11,7 @@ public class HomeWork10 {
             System.out.println("Please, put the number of task:");
             System.out.println("1. About Sentence of 5 word");
             System.out.println("2. About Space");
-//            System.out.println("3. About Currency");
+            System.out.println("3. About Currency");
 
 
             try {
@@ -23,7 +23,7 @@ public class HomeWork10 {
             switch (x) {
                 case 1 -> Task1.doTask(br);
                 case 2 -> Task2.doTask(br);
-//                case 3 -> Task2v2.doTask(br);
+                case 3 -> Task3.doTask(br);
 
                 case 0 -> {
                 }
