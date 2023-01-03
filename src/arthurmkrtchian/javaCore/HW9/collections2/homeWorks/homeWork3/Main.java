@@ -1,4 +1,5 @@
 package arthurmkrtchian.javaCore.HW9.collections2.homeWorks.homeWork3;
+import arthurmkrtchian.javaCore.HW9.collections2.practicalTasks.practicalTask.Names;
 
 
 //        3. Write class Student that provides information about the name of the student and his
@@ -15,5 +16,37 @@ package arthurmkrtchian.javaCore.HW9.collections2.homeWorks.homeWork3;
 //          • display the list of students ordered by course.
 
 
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Main {
+    public static void main(String[] args) {
+        List<Student> students = new ArrayList<>();
+        fillTheList(students, 5);
+        System.out.println("All students:");
+        Student.printAllStudents(students);
+        System.out.println("\nOnly students from 3th course:");
+        Student.printStudents(students, 3);
+
+        Student.sortByCourse(students);
+        System.out.println("\nStudents list sorted by course");
+        Student.printAllStudents(students);
+        Student.sortByName(students);
+        System.out.println("\nStudents list sorted by name");
+        Student.printAllStudents(students);
+    }
+
+    private static void fillTheList(List<Student> studentList, int count){
+        Random random = new Random(Names.values().length);
+        for (int i = 0; i < count; i++) {
+            studentList.add(new Student(Names.values()[random.
+                    nextInt(Names.values().length)].
+                    toString(),
+                    random.nextInt(4) +1));
+        }
+    }
+
+
 }

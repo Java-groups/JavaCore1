@@ -16,12 +16,11 @@ public class Main {
 
     public static void main(String[] args) {
         Map<String, String> personMap = fillMap();
-        mapToString(personMap);
+        printMap(personMap);
         isThereSameNames(personMap);
         removePerson(personMap, "Orest");
-        mapToString(personMap);
+        printMap(personMap);
     }
-
 
     public static void removePerson(Map<String,String> map, String firstNameToRemove){
         if (map.containsValue(firstNameToRemove)){
@@ -48,7 +47,7 @@ public class Main {
         result.put("Doroshenko", "Oleksiy");
         result.put("Simonyan", "Eva");
         result.put("Korotenko", "Borys");
-        result.put("Braun","Viktoria");
+        result.put("Braun","Viktoriya");
         result.put("Karpenko", "Volodymyr");
         result.put("Kasparov", "Borys");
         result.put("Johnson", "Orest");
@@ -57,7 +56,7 @@ public class Main {
         return result;
     }
 
-    public static void mapToString(Map<String,String> map){
+    public static void printMap(Map<String,String> map){
         for (Map.Entry<String, String> entry: map.entrySet()){
             System.out.printf(
                     "Person : %s %s \n",
