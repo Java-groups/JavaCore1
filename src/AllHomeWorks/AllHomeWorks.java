@@ -1,5 +1,6 @@
 package AllHomeWorks;
 import AllHomeWorks.HomeWork1.HomeWork1;
+import AllHomeWorks.HomeWork10.HomeWork10;
 import AllHomeWorks.HomeWork10Practical.HomeWork10Practical;
 import AllHomeWorks.HomeWork2.HomeWork2;
 import AllHomeWorks.HomeWork2Practical.HomeWork2Practical;
@@ -74,7 +75,7 @@ public class AllHomeWorks {
                     case 16 -> HomeWork9Practical.doTask(br);
                     case 17 -> HomeWork9.doSelectTask(br);
                     case 18 -> HomeWork10Practical.doSelectTask(br);
-     //               case 19 -> HomeWork10.doSelectTask(br);
+                    case 19 -> HomeWork10.doSelectTask(br);
 
 
 
