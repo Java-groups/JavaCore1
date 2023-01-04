@@ -16,9 +16,14 @@ public class HW_OOP_1
 		CreateBirdList.createBirdList(br_1, bird_list);
 
 		Developer dev1 = new Developer(br_1, "Developer", "Junior developer");
+		
 
 		System.out.println(dev1.report());
 
 		br_1.close(); 
+
+		Object obj = new Object();
+		
+
 	}
 }

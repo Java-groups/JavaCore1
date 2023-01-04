@@ -13,8 +13,6 @@ public class CreateLineList
 	{
 		boolean exit = false;
 		String  in_word;
-		int  in_year_manufacture;
-
 
 		do
 		{

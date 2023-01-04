@@ -21,7 +21,7 @@ public class LoopsPractice
 		System.out.println(CheckInput.getPosOrNeg(arr) ? "Positive." : "Negative.");
 		System.out.println("\t\t\t HOME WORK 4 PRACTICAL TASK 2_1");
 
-		Employee.createDogInstanceList(sc);
+		Employee.createEmployeeInstanceList(sc);
 
 		Employee.getSortedList();
 

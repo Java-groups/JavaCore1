@@ -48,7 +48,7 @@ public class Employee
 		this.salary = salary;
 	}
 
-	protected static void createDogInstanceList(Scanner sc)
+	protected static void createEmployeeInstanceList(Scanner sc)
 	{
 		boolean exit = false;
 		String  in_employee_name;
