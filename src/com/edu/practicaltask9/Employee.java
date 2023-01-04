@@ -26,7 +26,7 @@ public class Employee {
         employeeMap.put(6, "Abigail");
         employeeMap.put(7, "Isaak");
 
-        for (Map.Entry m : employeeMap.entrySet()) {
+        for (Map.Entry<Integer, String> m : employeeMap.entrySet()) {
             System.out.println(m.getKey() + " " + m.getValue());
         }
 
@@ -48,14 +48,20 @@ public class Employee {
 
         for (Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
 
-            if (entry.getValue().equals(name)) {
-                System.out.println("ID Employee with name: " + name + ", is: " + entry.getKey());
+            if (employeeMap.containsValue(name)) {
+
+                if (entry.getValue().equals(name)) {
+
+                    System.out.println("ID Employee with name: " + name + ", is: " + entry.getKey());
+                }
+            } else {
+
+                System.out.println("Employee with name: " + name + ", does not exist.");
+
+                break;
             }
-        }
-
-        if (!employeeMap.containsValue(name)) {
-            System.out.println("Employee with name: " + name + ", does not exist.");
 
         }
+
     }
 }
