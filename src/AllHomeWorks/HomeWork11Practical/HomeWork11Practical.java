@@ -1,6 +1,8 @@
 package AllHomeWorks.HomeWork11Practical;
 
 
+import AllHomeWorks.HomeWork11Practical.Task2.Task2;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -11,9 +13,7 @@ public class HomeWork11Practical {
             System.out.println();
             System.out.println("Please, put the number of task:");
             System.out.println("1. About Calculating");
-//            System.out.println("2. About Plant");
-
-
+            System.out.println("2. About Plant");
 
             try {
                 x = Integer.parseInt(br.readLine());
@@ -23,7 +23,7 @@ public class HomeWork11Practical {
 
             switch (x) {
                 case 1 -> Task1.doTask(br);
-//                case 2 -> Task2.doTask(br);
+                case 2 -> Task2.doTask(br);
 
 
                 case 0 -> {
