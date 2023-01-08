@@ -1,13 +1,11 @@
 package AllHomeWorks.HomeWork11;
 
 
-import AllHomeWorks.HomeWork11.Task2.Task2;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 
 public class HomeWork11 {
-    public static void doSelectTask(BufferedReader br) throws IOException {
+    public static void doSelectTask(BufferedReader br) throws Exception {
         int x = -1;
         do {
             System.out.println();

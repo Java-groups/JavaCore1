@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class AllHomeWorks {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             int x = -1;
             do {
