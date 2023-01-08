@@ -3,16 +3,17 @@ package arthurmkrtchian.javaCore.HW10.StringRegex.practicalTasks.practicalTask2;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class FullName {
+public class Person {
     private final String firstName;
     private final String middleName;
     private final String lastName;
+    private static final String pattern = "[a-z \\-A-Zа-яА-Я]+";
 
     private static String cleanString(String string){
         return string.trim().replaceAll("\\s+", " ");
     }
 
-    public void printSurnamesAndInitials() {
+    public void printSurnameAndInitials() {
         System.out.println(
                 "\nName: " + lastName  +
                 " " + firstName.charAt(0)  +
@@ -35,20 +36,20 @@ public class FullName {
     }
 
     private static String[] readFullName(String string){
-        Matcher m = Pattern.compile("[a-z \\-A-Zа-яА-Я]+").matcher(string);
+        Matcher m = Pattern.compile(pattern).matcher(string);
         if (m.matches() && string.split(" ").length == 3){
             return string.split(" ");
         }
-        throw new IllegalArgumentException("Incorrect input");
+        throw new IllegalArgumentException();
     }
 
-    public FullName(String fullName) {
+    public Person(String fullName) {
         fullName = cleanString(fullName);
         String[] name = readFullName(fullName);
 
         for (String s : name) {
             if (s.length() < 3) {
-                throw new IllegalArgumentException("Incorrect input");
+                throw new IllegalArgumentException();
             }
         }
 

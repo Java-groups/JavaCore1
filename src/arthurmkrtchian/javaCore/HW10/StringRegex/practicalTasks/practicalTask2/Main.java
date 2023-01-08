@@ -19,27 +19,27 @@ public class Main {
         //FullName fn = new FullName("Mkrtchian arthur         Vartanovych");
         //FullName fn = new FullName("Mkrtchian Arthur Vartanovy4");
         //FullName fn = new FullName("Mkrtian Arthur Vartanovych Dnipro");
-        FullName fn = readFullName();
+        Person fn = readName();
 
-        fn.printSurnamesAndInitials();
+        fn.printSurnameAndInitials();
         fn.printName();
         fn.printFirsMiddleLastNames();
 
-        System.out.println("\nIn any case, our operator will contact you to check that the name you entered is correct. Bye.");
+        System.out.println("\nIn any case, our operator will contact you to check is the name you`ve entered correct. Bye.");
     }
 
-    private static FullName readFullName(){
-        FullName fullName;
+    private static Person readName(){
+        Person person;
         while(true){
-            System.out.println("\nPlease, enter any name in following format: LastName FirstName MiddleName");
+            System.out.println("\nPlease, enter any name in following format: last name first name and patronymic");
             try {
-                fullName = new FullName(br.readLine());
+                person = new Person(br.readLine());
                 break;
             }catch (IllegalArgumentException | IOException e){
                 System.out.println("Incorrect input, try again\n");
             }
         }
-        return fullName;
+        return person;
     }
 
 }
