@@ -1,5 +1,7 @@
 package AllHomeWorks.Homework4Practical.Task1;
 
+import Helper.InputHelper;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -12,7 +14,7 @@ public class Task1 {
         int countNeg = 0;
 
         for (int i = 0; i < 10; i++){
-            numbersArray[i] = input(br);
+            numbersArray[i] = InputHelper.inputInteger(br);
             if (numbersArray[i] > 0){
                 countPos++;
                 Sum = Sum + numbersArray[i];

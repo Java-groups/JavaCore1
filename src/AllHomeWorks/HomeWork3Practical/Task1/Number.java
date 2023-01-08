@@ -1,5 +1,7 @@
 package AllHomeWorks.HomeWork3Practical.Task1;
 
+import Helper.InputHelper;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -16,23 +18,7 @@ public class Number {
 
     public void input(BufferedReader br) throws IOException {
         System.out.println("Enter Number:");
-        int number = 0;
-
-        try {
-            number = Integer.parseInt(br.readLine());
-        } catch (NumberFormatException e) {
-
-        }
-
-        while (number == 0) {
-            System.out.println("Number:" +number);
-            System.out.println("Please input number!");
-            try {
-                number = Integer.parseInt(br.readLine());
-            } catch (NumberFormatException e) {
-
-            }
-        }
+        int number = InputHelper.inputInteger(br);
         this.setNumber(number);
     }
 

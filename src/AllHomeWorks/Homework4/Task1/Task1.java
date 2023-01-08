@@ -1,5 +1,7 @@
 package AllHomeWorks.Homework4.Task1;
 
+import Helper.InputHelper;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -28,13 +30,14 @@ public class Task1 {
         System.out.println("Enter Number of Month:");
         int monthNumber = -1;
         try {
-            monthNumber = Integer.parseInt(br.readLine());
+            monthNumber = InputHelper.inputInteger(br);
         } catch (NumberFormatException ignored) {}
         while (monthNumber <= 0) {
             System.out.println("Incorrect Value!");
             System.out.println("Please input Number of Month:");
             try {
-                monthNumber = Integer.parseInt(br.readLine());
+                monthNumber = InputHelper.inputInteger(br);
+
             } catch (NumberFormatException ignored) {}
         }
         return monthNumber;
