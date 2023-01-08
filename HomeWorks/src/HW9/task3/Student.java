@@ -11,7 +11,7 @@ public class Student {
 	private Integer course;
 
 	public Student() {
-	};
+	}
 
 	public Student(String name, int course) {
 		this.name = name;
@@ -54,7 +54,6 @@ public class Student {
 
 		student.compareByCourse(students);
 		System.out.println("\nList of students ordered by course: " + students);
-
 	}
 
 	public void printStudent(List<Student> students, Integer course) {
@@ -69,7 +68,6 @@ public class Student {
 				System.out.println(element);
 			}
 		}
-
 	}
 
 	public void compareByName(List<Student> student) {
@@ -98,5 +96,4 @@ public class Student {
 			return Integer.compare(o1.getCourse(), o2.getCourse());
 		}
 	}
-
 }
