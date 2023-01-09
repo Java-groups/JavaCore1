@@ -13,6 +13,10 @@ public class Main {
         System.out.println(collection.randomNumbersInput(myCollection));
         System.out.println(collection.swapMinMaxNumbers(myCollection));
         System.out.println(collection.insertThreeDigitNumber(myCollection));
+        System.out.println(collection.listCopy(myCollection));
+        System.out.println(collection.listReversedCopy(myCollection));
+        System.out.println(collection.removeLastEvenElement(myCollection));
+        System.out.println(collection.removeNextToMinimumElement(myCollection));
 
     }
 }
