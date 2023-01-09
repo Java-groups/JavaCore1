@@ -6,7 +6,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task1 {
-    static int squareRectangle(int a, int b) {
+    static int squareRectangle(int a, int b) throws MyException {
+        if (a <= 0 || b <= 0) {
+            throw new MyException("Non valid sides");
+        }
         return a * b;
     }
 
@@ -22,9 +25,7 @@ public class Task1 {
             System.out.println("Enter sides of the rectangle:");
             int a = Integer.parseInt(br.readLine());
             int b = Integer.parseInt(br.readLine());
-            if (a <= 0 || b <= 0) {
-                throw new MyException("Non valid sides");
-            }
+
             System.out.println("Area of the rectangle with your sides: " + squareRectangle(a, b));
         } catch (IOException | NumberFormatException | MyException e) {
             System.out.println(e.getMessage());
