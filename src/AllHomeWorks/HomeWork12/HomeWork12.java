@@ -10,7 +10,7 @@ public class HomeWork12 {
             System.out.println("Please, put the number of task:");
             System.out.println("1. About encrypt/decrypt");
             System.out.println("2. About validate data to format mm.dd.yy");
-//            System.out.println("3. About leap year");
+            System.out.println("3. About leap year");
 //            System.out.println("4. About Local Date Birthday");
 
             try {
@@ -22,7 +22,7 @@ public class HomeWork12 {
             switch (x) {
                 case 1 -> Task1.doTask(br);
                 case 2 -> Task2.doTask(br);
-//                case 3 -> Task3.doTask(br);
+                case 3 -> Task3.doTask(br);
 //                case 4 -> Task4.doTask(br);
 
 
