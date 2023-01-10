@@ -10,7 +10,8 @@ public class AppExceptions
 	{
 
 		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
-/*
+
+		System.out.println("\t\t\tPRACTICAL_TASK_11");
 		int squareSides[] = new int[2];
 
 		try 
@@ -24,14 +25,14 @@ public class AppExceptions
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
-*/
+
 
 		String color = "azure".toUpperCase();
 		String type = "mOss".toUpperCase();
 
 		try
 		{
-			System.out.println("\t\t\tPRACTICAL_TASK_11");
+			
 			
 			System.out.println(Color.values()[Color.getColorNumber(color)].getColor()  );
 
