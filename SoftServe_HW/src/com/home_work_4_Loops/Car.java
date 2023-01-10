@@ -1,6 +1,7 @@
 package com.home_work_4_Loops;
 
-
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -38,13 +39,14 @@ public class Car
 	{
 		this.engine_capacity = engine_capacity;
 	}
+
+/* version before check exceptions
 	protected static void createCarInstanceList(Scanner sc, HashMap<Integer, Car> car_map_list)
 	{
 		boolean exit = false;
 		String  in_word;
 		int input_car_year;
 		double  input_car_capacity;
-
 
 		do
 		{
@@ -68,7 +70,44 @@ public class Car
 			}
 		}while(!exit);
 	}
+*/
+
+	protected static void createCarInstanceList(BufferedReader br, HashMap<Integer, Car> car_map_list) throws IOException, Exception
+	{
+		boolean exit = false;
+		String  in_word;
+		int input_car_year;
+		double  input_car_capacity;
+
+		do
+		{
+			System.out.println("Please, to fill out the cars list and add new car in it,\nfirst enter year of production and then engine capacity or word `exit` to quit without changes.");
+
+			if( (in_word = br.readLine()).isEmpty() )
+			{
+				throw new Exception("In double field was entered empty value.");
+			}
+			if("exit".equals( in_word)) 
+			{
+				exit=true;
+			}
+			else
+			{
+				input_car_year = Integer.parseInt(in_word);
+				car_map_list.put( count, new Car(input_car_year) );
+
+				System.out.println("Please, enter new car engine capacity.");
+
+				input_car_capacity = Car.checkInFormatDoubleOrExit(br);
+				car_map_list.get(count-1).setEngine_capacity(input_car_capacity);
+
+				exit=false;
+			}
+		}while(!exit);
+	}
 	
+/*
+version before check exceptions
 	protected static int checkInFormatIntOrExit(Scanner sc)
 	{
 		do
@@ -87,7 +126,42 @@ public class Car
 			}
 		}while(true);
 	}
+*/
+	
+	protected static int checkInFormatIntOrExit(BufferedReader br) throws IOException, Exception
+	{
+		do
+		{
+			String in_word;
 
+			System.out.println("Please, enter integer numeric value, or `q` for exit.");
+
+			try 
+			{
+				if( (in_word = br.readLine()).isEmpty() )
+				{
+					throw new Exception("In integer field was entered empty value.");
+				}
+				else if("q".equals(in_word))
+				{
+					break;
+				}
+				else
+				{
+					 return Integer.parseInt(in_word);
+				}	
+			}
+			catch(NumberFormatException exc)
+			{
+				System.out.println("Please, enter numeric value , or for exit enter: q.");
+			}
+		}while(true);
+
+		return 0;
+	}
+
+/*
+version before check exception
 	protected static double checkInFormatDoubleOrExit(Scanner sc)
 	{
 		do
@@ -105,6 +179,38 @@ public class Car
 				System.out.println("Please, enter numeric value , or for exit enter: q.");
 			}
 		}while(true);
+	}
+*/
+	
+	protected static double checkInFormatDoubleOrExit(BufferedReader br) throws IOException, Exception
+	{
+		do
+		{
+			String in_word;
+			
+			System.out.println("Please, enter numeric value that will belong or not to the range, or `q` for exit.");
+			
+			try 
+			{
+				if( (in_word = br.readLine()).isEmpty() )
+				{
+					throw new Exception("In integer field was entered empty value.");
+				}
+				else if("q".equals(in_word))
+				{
+					break;
+				}
+				else
+				{
+					 return Double.parseDouble(in_word);
+				}		
+			}
+			catch(NumberFormatException exc)
+			{
+				System.out.println("Please, enter numeric value , or for exit enter: q.");
+			}
+		}while(true);
+		return 0;
 	}
 
 	protected static void showCarsInfo(HashMap<Integer, Car> car_map_list) 

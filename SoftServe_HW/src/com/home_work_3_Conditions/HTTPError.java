@@ -1,5 +1,7 @@
 package com.home_work_3_Conditions;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -99,7 +101,7 @@ public enum HTTPError
 		}
 	}
 
-	public static void getValues(int httpErrCode) 
+	public static void getValues(int httpErrCode) throws Exception 
 	{
 		buffer();
 
@@ -107,7 +109,14 @@ public enum HTTPError
 		{
 			System.out.println("HTTP error code: " + httpErrCode + "; Description: " + mapHTTPErrors.get(httpErrCode));
 		}
+		else
+		{
+			throw new Exception("HTTPerror with entered number not found.");
+		}
 	}
+
+/*
+version before check exceptions
 
 	protected static int checkInFormatIntOrExit(Scanner in)
 	{
@@ -132,4 +141,34 @@ public enum HTTPError
 			}
 		}while(true); 
 	}
+*/
+
+	protected static int checkInFormatIntOrExit(BufferedReader br) throws IOException, Exception
+	{
+		String in_word;
+
+		do 
+		{
+			System.out.println("Please, enter HTTP error number, or q for exit.");
+			try 
+			{
+				if( (in_word = br.readLine()).isEmpty() )
+				{
+					throw new Exception("In double field was entered empty value.");
+				}
+				while(!"q".equals( in_word ) && Integer.parseInt(in_word) <= 0)
+				{
+					System.out.println("Please, enter value greater than zero, or for exit enter: q.");
+				}
+
+				return "q".equals(in_word) ? -1 : Integer.parseInt(in_word);
+
+			}
+			catch(NumberFormatException exc)
+			{
+				System.out.println("Please, enter value greater than zero, or for exit enter: q.");
+			}
+		}while(true); 
+	}
+
 }

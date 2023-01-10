@@ -1,5 +1,7 @@
 package com.home_work_3_Conditions;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -51,6 +53,8 @@ public class Dog
 		this.age = age;
 	}
 
+/* 
+ version before check exceptions 
 	protected static void createDogInstanceList(Scanner sc)
 	{
 		boolean exit = false;
@@ -83,6 +87,52 @@ public class Dog
 
 				Breed.showBreedsInfo();
 				in_dog_breed = CheckCondition.checkInFormatIntOrExit(sc);
+				name_dog_list.get(in_dog_name).setBreed(in_dog_breed);
+				name_breed_dog_list.put(in_dog_name, Breed.getDogBreed(in_dog_breed));
+				name_age_dog_list.put(in_dog_name, localAge);
+
+				exit=false;
+			}
+		}while(!exit);
+	}
+*/
+	
+	protected static void createDogInstanceList(BufferedReader br) throws IOException, Exception
+	{
+		boolean exit = false;
+		String  in_dog_name;
+		int  in_dog_breed;
+		int localAge;
+
+	out:do
+		{
+			System.out.println("Please, to fill out the dogs list and add new dog in it,\nenter name, age and then breed or word `exit` to quit without changes.");
+
+			if( (in_dog_name = br.readLine()).isEmpty() )
+			{
+				throw new Exception("In double field was entered empty value.");
+			}
+			if("exit".equals( in_dog_name) ) 
+			{
+				exit=true;
+			}
+			else
+			{
+				if( !name_dog_list.containsKey(in_dog_name) ) 
+				{
+					name_dog_list.put( in_dog_name, new Dog(in_dog_name) );
+				}
+				else
+				{
+					System.out.println("Dog with same name already exist.");
+					continue out;
+				};
+
+				System.out.println("Please, enter new dog age.");
+				name_dog_list.get(in_dog_name).setAge( localAge = CheckCondition.checkInFormatIntOrExit(br) );
+
+				Breed.showBreedsInfo();
+				in_dog_breed = CheckCondition.checkInFormatIntOrExit(br);
 				name_dog_list.get(in_dog_name).setBreed(in_dog_breed);
 				name_breed_dog_list.put(in_dog_name, Breed.getDogBreed(in_dog_breed));
 				name_age_dog_list.put(in_dog_name, localAge);

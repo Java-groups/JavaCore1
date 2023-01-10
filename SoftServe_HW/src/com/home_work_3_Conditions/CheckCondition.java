@@ -1,5 +1,7 @@
 package com.home_work_3_Conditions;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -10,6 +12,8 @@ public class CheckCondition
 		return ( (in_value >= min_range) & (in_value <= max_range) ) ? true : false;
 	}
 
+/*
+ version before check exception
 	protected static int checkInFormatIntOrExit(Scanner sc)
 	{
 		do
@@ -28,7 +32,42 @@ public class CheckCondition
 			}
 		}while(true);
 	}
+*/
+	
+	protected static int checkInFormatIntOrExit(BufferedReader br) throws IOException, Exception
+	{
+		do
+		{
+			String in_word;
 
+			System.out.println("Please, enter integer numeric value, or `q` for exit.");
+
+			try 
+			{
+				if( (in_word = br.readLine()).isEmpty() )
+				{
+					throw new Exception("In integer field was entered empty value.");
+				}
+				else if("q".equals(in_word))
+				{
+					break;
+				}
+				else
+				{
+					 return Integer.parseInt(in_word);
+				}
+			}
+			catch(NumberFormatException exc)
+			{
+				System.out.println("Please, enter numeric value , or for exit enter: q.");
+			}
+		}while(true);
+
+		return 0;
+	}
+	
+ /*
+   	version before check exception
 	protected static double checkInFormatDoubleOrExit(Scanner sc)
 	{
 		do
@@ -47,7 +86,40 @@ public class CheckCondition
 			}
 		}while(true);
 	}
+*/
 
+	protected static double checkInFormatDoubleOrExit(BufferedReader br) throws Exception, IOException
+	{
+		do
+		{
+			String in_word;
+
+			System.out.println("Please, enter numeric value that will belong or not to the range, or `q` for exit.");
+
+			try 
+			{
+				if( (in_word = br.readLine()).isEmpty() )
+				{
+					throw new Exception("In double field was entered empty value.");
+				}
+				if("q".equals(in_word))
+				{
+					break;
+				}
+				else
+				{
+					return Double.parseDouble(in_word);
+				}
+	
+			}
+			catch(NumberFormatException exc)
+			{
+				System.out.println("Please, enter numeric value , or for exit enter: q.");
+			}
+		}while(true);
+		return 0;
+	}
+	
 	protected static double getMin(double[] arg)
 	{
 		double min_value = arg.length>0 ? arg[0] : 0;
@@ -81,6 +153,8 @@ public class CheckCondition
 		return localArr;
 	}
 
+/*
+   	version before check exception
 	protected static double[] fillOutNumbersArr(Scanner sc)
 	{
 
@@ -111,4 +185,42 @@ public class CheckCondition
 			}
 		}while(true);
 	}
+*/
+	
+	protected static double[] fillOutNumbersArr(BufferedReader br) throws IOException, Exception
+	{
+
+		HashMap<Integer, Double> localMapBuffer = new HashMap<Integer, Double>();
+
+		int iteration=0;
+
+		do
+		{
+			String in_word;
+
+			System.out.println("Please, enter numeric value that will be added in array on " + localMapBuffer.size() +" position, or `q` for exit.");
+			try 
+			{
+				if( (in_word = br.readLine()).isEmpty() )
+				{
+					throw new Exception("In double field was entered empty value.");
+				}
+				if("q".equals(in_word))
+				{
+					return bufferIntDouble(localMapBuffer);
+				}
+				else
+				{
+					localMapBuffer.put(iteration, Double.parseDouble(in_word));
+					iteration++;
+				}
+			}
+			catch(NumberFormatException exc)
+			{
+				System.out.println("Please, enter numeric value, or for exit enter: q.");
+			}
+		}while(true);
+	}
+
+
 }

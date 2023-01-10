@@ -1,5 +1,7 @@
 package com.home_work_4_Loops;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -13,6 +15,7 @@ public class Loops_HW
 		System.out.println("\t\t\t HOME WORK 4 TASK 1");
 
 		Scanner sc = new Scanner(System.in);
+		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
 
 /*
 		EnterMonth.showAmountOfDays(EnterMonth.createMonthDaysList(sc));
@@ -39,15 +42,29 @@ public class Loops_HW
 
 		System.out.println("\t\t\t HOME WORK 4 TASK 4");
 		System.out.println("Please, to fill out car list enter year of production and then engine capacity.");
-		Car.createCarInstanceList(sc, car_map_list);
-
-		Car.showCarsInfo(car_map_list);
+		try
+		{
+			Car.createCarInstanceList(br_1, car_map_list);
+			Car.showCarsInfo(car_map_list);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 
 		System.out.println("Please, enter car year of production to show cars list by year.");
-		Car.showCarsByYear(Car.checkInFormatIntOrExit(sc), car_map_list);
+		try
+		{
+			Car.showCarsByYear(Car.checkInFormatIntOrExit(br_1), car_map_list);
+			System.out.println("Below sorted cars list by year.");
+			Car.sortByYear(car_map_list);
+			br_1.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 
-		System.out.println("Below sorted cars list by year.");
-		Car.sortByYear(car_map_list);
-
+		sc.close();
 	}
 }
