@@ -12,11 +12,11 @@ import java.util.regex.Pattern;
 public class UserName {
     public static void main(String[] args) {
         String[] names = new String[5];
-        names[0] = ("Bart_Simpson");
-        names[1] = ("Homer Simpson");
-        names[2] = ("Lisa_Simpson___");
-        names[3] = ("MargeBouvier12345");
-        names[4] = ("!@#EdnaKrabappel");
+        names[0] = "Bart_Simpson";
+        names[1] = "Homer Simpson";
+        names[2] = "Lisa_Simpson___";
+        names[3] = "MargeBouvier12345";
+        names[4] = "!@#EdnaKrabappel";
 
         Pattern p = Pattern.compile("^[a-zA-Z0-9_-]{3,15}$");
 
