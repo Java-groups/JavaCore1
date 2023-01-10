@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String currency = scanner.nextLine();
-        Pattern pattern = Pattern.compile("\\$\\d+(\\.)+\\d{2}");
+        Pattern pattern = Pattern.compile("\\$\\d+(\\.)+\\d{0,2}");
 
         Matcher matcher = pattern.matcher(currency);
         while (matcher.find()){

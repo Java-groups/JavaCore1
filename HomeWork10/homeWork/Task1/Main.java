@@ -16,7 +16,7 @@ public class Main {
         longestWord = elements[0];
         for(int i=0;i<elements.length;i++) {
             if (elements[i].length() > max) {
-                max = elements[i].length();
+                max = longestWord.length();
                 longestWord = elements[i];
             }
         }
