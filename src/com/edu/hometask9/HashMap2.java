@@ -7,16 +7,17 @@ package com.edu.hometask9;
         Remove from the map person whose firstName is ”Orest” (or other). Print result.
         */
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class HashMap {
+public class HashMap2 {
     public static void main(String[] args) {
 
         String firstName="Bob";
 
-        Map<String, String> personMap = new java.util.HashMap<>();
+        Map<String, String> personMap = new HashMap<>();
 
         personMap.put("Dylan", "Bob");
         personMap.put("Mozart", "Wolfgang Amadeus");
@@ -44,7 +45,7 @@ public class HashMap {
         // Copy personMap to iterate through copy to avoid:
         // "java.util.ConcurrentModificationException":
 
-        Map<String, String> copy = new java.util.HashMap<String, String>(personMap);
+        Map<String, String> copy = new HashMap<>(personMap);
 
         for (Map.Entry<String, String> entry : copy.entrySet()) {
             if(entry.getValue().equals(firstName)) {
