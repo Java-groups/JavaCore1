@@ -58,30 +58,38 @@ public class PracticalTasks {
         employees[3] = employee4;
         employees[4] = employee5;
         Employee temp = new Employee();
-         sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
         System.out.println("Введіть номер департаменту для пошуку");
         int department = sc.nextInt();
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getDepartment_number() == department) {
-                System.out.println(employees[i].toString());
+        try {
+            for (int i = 0; i < employees.length; i++) {
+                if (employees[i].getDepartment_number() == department) {
+                    System.out.println(employees[i].toString());
+                }
             }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
         System.out.println("------------------------------------");
-        for (int i = 0; i < employees.length - 1; i++)
-            // compare the elements of the array with a loop
-            for (int j = 0; j < employees.length - i - 1; j++)
-                // compare two adjacent elements in the array
-                if (employees[j].getSalary() < employees[j + 1].getSalary()) {
-                    // Swap if the elements aren't in the right order
-                    temp = employees[j];
-                    employees[j] = employees[j + 1];
-                    employees[j + 1] = temp;
-                }
+        try {
+            for (int i = 0; i < employees.length - 1; i++)
+                // compare the elements of the array with a loop
+                for (int j = 0; j < employees.length - i - 1; j++)
+                    // compare two adjacent elements in the array
+                    if (employees[j].getSalary() < employees[j + 1].getSalary()) {
+                        // Swap if the elements aren't in the right order
+                        temp = employees[j];
+                        employees[j] = employees[j + 1];
+                        employees[j + 1] = temp;
+                    }
             for (int i = 0; i < employees.length; i++) {
                 System.out.println(employees[i]);
             }
 
 
+        }catch (Exception e){
+            System.out.println("Catch exception");
         }
+    }
     }
 
