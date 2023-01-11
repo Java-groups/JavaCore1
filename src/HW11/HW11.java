@@ -2,10 +2,7 @@ package HW11;
 
 import HW11.model.CheckRangeException;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class HW11 {
     public static double div(double a, double b) {
@@ -20,9 +17,9 @@ public class HW11 {
         return a / b;
     }
 
-    public static void readNumber(int start, int end) {
+    public static int readNumber(int start, int end) {
 
-        int num;
+        int num = 0;
         String number;
         System.out.println("Enter number to check: ");
         Scanner sc = new Scanner(System.in);
@@ -44,6 +41,7 @@ public class HW11 {
         } catch (CheckRangeException e) {
             System.out.println("This number is not in range ");
         }
+        return num;
     }
 
     public static void main(String[] args) throws Exception {
@@ -63,13 +61,36 @@ public class HW11 {
         System.out.println("Enter end: ");
         int end = sc.nextInt();
         System.out.println("Enter 10 numbers [1;100] growing up in order");
-
+        List<Integer> numbers = new ArrayList<Integer>();
         for (int i = 0; i < 10; i++) {
 
-            readNumber(start,end);
+            //readNumber(start,end);
+            numbers.add(readNumber(start,end));
 
         }
 
+        //Arrays.sort();
+//        int[] numbe = new int[]{1,2,367,23,54 };
+//        Arrays.sort(numbe);
+//        for (int i = 0; i < numbe.length; i++) {
+//            System.out.println(numbe[i]);
+//        }
+       // System.out.println(numbe);
+       // numbers.sort((o1, o2) -> o1 - o2);
+//        numbers.sort(new Comparator<Integer>() {
+//            @Override
+//            public int compare(Integer o1, Integer o2) {
+//                if (o2 > o1){
+//                    return 1;
+//                } else if (o2 < o1){
+//                    return -1;
+//                } else{
+//                    return 0;
+//                }
+//
+//            }
+//        });
+        System.out.println("After sorting: " + numbers);
     }
 
 
