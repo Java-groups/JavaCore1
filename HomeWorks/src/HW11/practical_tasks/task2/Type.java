@@ -19,7 +19,6 @@ public enum Type {
 				return type;
 			} 
 		}
-
 	    throw new TypeException("You are trying to input wrong type!");
 	}
 }

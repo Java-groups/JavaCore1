@@ -1,45 +1,45 @@
 package HW11.practical_tasks.task2;
 
 public class Plant {
-	private static int size;
-	private static Color color;
-	private static Type type;
+	private int size;
+	private Color color;
+	private Type type;
 
 	public Plant(String type, String color, int size) throws ColorException, TypeException {
 		Color c = Color.fromValue(color);
 		Type t = Type.fromValue(type);
-		Plant.size = size;
-		Plant.type = t;
-		Plant.color = c;
+		this.size = size;
+		this.type = t;
+		this.color = c;
 	}
 
-	public static int getSize() {
+	public int getSize() {
 		return size;
 	}
 
-	public static void setSize(int size) {
-		Plant.size = size;
+	public void setSize(int size) {
+		this.size = size;
 	}
 
-	public static Color getColor() {
+	public Color getColor() {
 		return color;
 	}
 
-	public static void setColor(Color color) {
-		Plant.color = color;
+	public void setColor(Color color) {
+		this.color = color;
 	}
 
-	public static Type getType() {
+	public Type getType() {
 		return type;
 	}
 
-	public static void setType(Type type) {
-		Plant.type = type;
+	public void setType(Type type) {
+		this.type = type;
 	}
 
 	@Override
 	public String toString() {
-		return "\nPlant: \nType: " + getType() + ";\nColor: " + getColor() + ";\nSize: " + getSize() + ";\n";
+		return "\nPlant: \nType: " + type + ";\nColor: " + color + ";\nSize: " + size + ";\n";
 	}
 
 }
