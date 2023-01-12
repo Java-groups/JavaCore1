@@ -65,8 +65,7 @@ public class CreateList
 				{
 					if(mtch.find())
 					{
-						System.out.println("Exist '.'.");
-	
+
 							mtch = null;
 							mtch = ptrn_surname.matcher(in_string_field);
 							mtch.find();
@@ -74,8 +73,8 @@ public class CreateList
 							mtch = ptrn_dot_name.matcher(in_string_field);
 							mtch.find();
 							System.out.println("Name: " + (str_name = (mtch.group()).trim()));
-							mtch=null;
 							mtch = ptrn_mid_name.matcher(in_string_field);
+							mtch.find();
 							mtch.find();
 							System.out.println("Patronymic: " + (str_patronymic = (mtch.group()).trim()));
 					}
@@ -88,6 +87,7 @@ public class CreateList
 							mtch.find();
 							System.out.println("Name: " + (str_name = (mtch.group()).trim()));
 							mtch = ptrn_mid_name.matcher(in_string_field);
+							mtch.find();
 							mtch.find();
 							System.out.println("Patronymic: " + (str_patronymic = (mtch.group()).trim()));
 					}
