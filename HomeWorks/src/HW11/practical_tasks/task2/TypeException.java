@@ -6,11 +6,4 @@ public class TypeException extends Exception {
 	public TypeException(String msg) {
 		super(msg);
 	}
-
-//	public static void validate(String type) throws TypeException {
-//		Type type = new Type();
-//		if (type.getType().equals(type)) {
-//			throw new TypeException("age is not valid to vote");
-//		} 
-//	}
 }
