@@ -32,8 +32,14 @@ public abstract class Person implements Cloneable {
 	abstract public String activity();
     
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        Person copyOfPerson = (Person) super.clone();
+    protected Object clone() {
+        Person copyOfPerson = null;
+		try {
+			copyOfPerson = (Person) super.clone();
+		} catch (CloneNotSupportedException e) {
+			System.out.println("\nOOPS! SOMETHING WENT WRONG!\n");
+			e.printStackTrace();
+		}
         copyOfPerson.fullName = (FullName)copyOfPerson.fullName.clone();
         return copyOfPerson;
     }

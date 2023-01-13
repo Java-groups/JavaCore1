@@ -22,8 +22,14 @@ public class FullName implements Cloneable {
 	}
 	
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Object clone() {
+        try {
+			return super.clone();
+		} catch (CloneNotSupportedException e) {
+			System.out.println("\nOOPS! SOMETHING WENT WRONG!\n");
+			e.printStackTrace();
+		}
+		return null;
     }
 
 }

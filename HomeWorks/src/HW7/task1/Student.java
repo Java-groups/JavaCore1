@@ -27,7 +27,7 @@ public class Student extends Person implements Cloneable {
 	}
 	
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Object clone() {
         return super.clone();
     }
 	

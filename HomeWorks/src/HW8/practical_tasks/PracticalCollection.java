@@ -55,20 +55,32 @@ public class PracticalCollection {
 		return myCollection;
 	}
 
-	public List<Integer> insertInPosition(int numbers) throws NumberFormatException, IOException {
+	public List<Integer> insertInPosition(int numbers) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int i = 0;
 		while (i < numbers) {
 			System.out.print("\nEnter the position in the list where you want to insert a number: ");
 
 			try {
-				int position = Integer.parseInt(br.readLine());
+				int position = 0;
+				try {
+					position = Integer.parseInt(br.readLine());
+				} catch (IOException e) {
+					System.out.println("\nOOPS! SOMETHING WENT WRONG!\n");
+					e.printStackTrace();
+				}
 				if (position > myCollection.size()) {
 					System.out.println("\nINDEX '" + position + "' IS OUT OF BOUND!\nTRY AGAIN!");
 					continue;
 				} else {
 					System.out.print("\nEnter number you want to add in position " + position + ": ");
-					int element = Integer.parseInt(br.readLine());
+					int element = 0;
+					try {
+						element = Integer.parseInt(br.readLine());
+					} catch (IOException e) {
+						System.out.println("\nOOPS! SOMETHING WENT WRONG!\n");
+						e.printStackTrace();
+					}
 					myCollection.add(position, element);
 					i++;
 				}

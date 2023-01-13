@@ -34,16 +34,27 @@ public class Department implements Cloneable {
 
 	@Override
 	public String toString() {
-		return "Department: " + name + " - " + address ;
+		return "Department: " + name + " - " + address;
 	}
-	
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-    	Department copyOfDepartment = (Department) super.clone();
-    	copyOfDepartment.address = (Address)copyOfDepartment.address.clone();
-    	
-    	return copyOfDepartment;
-    }
+
+	@Override
+	protected Object clone() {
+		Department copyOfDepartment = null;
+		try {
+			copyOfDepartment = (Department) super.clone();
+		} catch (CloneNotSupportedException e) {
+			System.out.println("\nOOPS! SOMETHING WENT WRONG!\n");
+			e.printStackTrace();
+		}
+		try {
+			copyOfDepartment.address = (Address) copyOfDepartment.address.clone();
+		} catch (CloneNotSupportedException e) {
+			System.out.println("\nOOPS! SOMETHING WENT WRONG!\n");
+			e.printStackTrace();
+		}
+
+		return copyOfDepartment;
+	}
 
 	static class Address implements Cloneable {
 		private String city;
@@ -85,26 +96,26 @@ public class Department implements Cloneable {
 		public String toString() {
 			return "Address: " + city + ", " + street + ", " + building;
 		}
-		
-        @Override
-        protected Object clone() throws CloneNotSupportedException {
-            return super.clone();
-        }
+
+		@Override
+		protected Object clone() throws CloneNotSupportedException {
+			return super.clone();
+		}
 
 	}
 
-	public static void main(String[] args) throws CloneNotSupportedException {
+	public static void main(String[] args) {
 		List<Department> departments = new ArrayList<>();
 		departments.add(new Department("SoftServe-2", new Department.Address("Lviv", "Pasternaka street", 5)));
 		departments.add(new Department("SoftServe-8", new Department.Address("Lviv", "Naukova street", 7)));
 		departments.add(new Department("SoftServe-5", new Department.Address("Lviv", "Smal-Stockoho street", 38)));
-        
+
 		Department copyOfDepartment = (Department) departments.get(departments.size() - 1).clone();
 		copyOfDepartment.address.setCity("Rivne");
 		departments.add(copyOfDepartment);
-		
-        departments.forEach(department -> System.out.println(department));
-		
- 	}
+
+		departments.forEach(department -> System.out.println(department));
+
+	}
 
 }

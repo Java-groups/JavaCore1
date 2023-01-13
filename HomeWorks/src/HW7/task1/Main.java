@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
 
-	public static void main(String[] args) throws CloneNotSupportedException {
+	public static void main(String[] args) {
 
 		List<Student> students = new ArrayList<>();
 		students.add(new Student(new FullName("Oleh", "Vyshnevskyj"), 21, 4));
