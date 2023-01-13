@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class Task_3 {
     public static void main(String[] args) {
-//First
+//First version
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a year to check: ");
         int input = sc.nextInt();
         Year year1 = Year.of(input);
         System.out.println(year1.isLeap());
 
-//Second
+//Second version
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter a year to check: ");
 //        int year = sc.nextInt();
