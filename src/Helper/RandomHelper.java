@@ -1,6 +1,16 @@
 package Helper;
 
+import java.util.List;
+
 public class RandomHelper {
+    public static <T> T randomElementFromList(List<T> list) {
+        return list.get(positiveInteger(list.size()));
+    }
+
+    public static Integer positiveInteger(int max) {
+        return (int) (Math.random() * max);
+    }
+
     public static Integer negativePositiveInteger(int max) {
         try {
             return negativePositiveInteger(max, 1);
