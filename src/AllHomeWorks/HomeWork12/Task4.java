@@ -26,7 +26,7 @@ public class Task4 {
         DayOfWeek infoDay12Month = temp12.getDayOfWeek();
         System.out.printf("\nThe day after 6 months after birthday is %s", infoDay6Month);
         System.out.printf("\nThe day after 12 months after birthday is %s", infoDay12Month);
-        System.out.printf("\n");
+        System.out.println("\n");
 
     }
 }
