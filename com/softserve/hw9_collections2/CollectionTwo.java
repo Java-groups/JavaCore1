@@ -1,6 +1,6 @@
 package com.softserve.hw9_collections2;
 
-import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class CollectionTwo {
@@ -14,4 +14,12 @@ public class CollectionTwo {
         set1.retainAll(set2);
         return set1;
     }
+
+    public Map<String, String> person(Map<String, String> personMap) {
+        if (personMap.containsKey("Franko")) {
+            personMap.remove("Franko");
+        }
+        return personMap;
+    }
+
 }
