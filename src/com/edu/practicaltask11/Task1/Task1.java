@@ -1,4 +1,4 @@
-package com.edu.practicaltask11;
+package com.edu.practicaltask11.Task1;
 
 /*   1. Create a method for calculating the area of a rectangle
         int squareRectangle (int a, int b),
