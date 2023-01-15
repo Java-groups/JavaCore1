@@ -5,10 +5,10 @@ public class Main {
         Crypto crypto = new Crypto();
         Cryptography<String, String> encryptor = crypto::encrypt;
         Cryptography<String, String> decryptor = crypto::decrypt;
-        String encrypted = encryptor.convert(str, 4);
-        System.out.println(encrypted);
-        String decrypted = decryptor.convert(encrypted, 4);
-        System.out.println(decrypted);
+        String encrypted = encryptor.convert(str, 3);
+        System.out.println("Encrypted "+encrypted);
+        String decrypted = decryptor.convert(encrypted, 3);
+        System.out.println("Decrypted "+decrypted);
 
         Cryptography<String, String> encryptorL = (s, n) -> {
             StringBuilder sb = new StringBuilder();
@@ -27,8 +27,8 @@ public class Main {
         };
 
         String enc = encryptorL.convert(str,3);
-        System.out.println(enc);
+        System.out.println("Encrypted "+enc);
         String dec = decryptorL.convert(enc,3);
-        System.out.println(dec);
+        System.out.println("Decrypted "+dec);
     }
 }
