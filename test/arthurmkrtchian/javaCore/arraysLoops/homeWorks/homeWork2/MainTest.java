@@ -1,7 +1,7 @@
 package arthurmkrtchian.javaCore.arraysLoops.homeWorks.homeWork2;
 
-import arthurmkrtchian.javaCore.HW4.arraysLoops.homeWorks.homeWork2.Main;
-import arthurmkrtchian.javaCore.HW4.arraysLoops.homeWorks.homeWork2.Result;
+import arthurmkrtchian.javaCore.HW04.arraysLoops.homeWorks.homeWork2.Main;
+import arthurmkrtchian.javaCore.HW04.arraysLoops.homeWorks.homeWork2.Result;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
