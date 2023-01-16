@@ -1,4 +1,7 @@
 package com.edu.practicaltask12;
+/*
+Show a date of first Monday for current month
+*/
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

@@ -1,4 +1,7 @@
 package com.edu.practicaltask12;
+/*
+Show which today is a day of a week
+*/
 
 import java.time.LocalDate;
 
