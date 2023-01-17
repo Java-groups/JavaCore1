@@ -27,11 +27,11 @@ public class Task2 {
                 } catch (InterruptedException e) {
                     System.out.println(e.getMessage());
                 }
-
+            }
                 synchronized (first) {
                     System.out.println(thread2.getName());
                 }
-            }
+
         }
     };
 
