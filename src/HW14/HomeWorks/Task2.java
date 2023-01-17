@@ -1,14 +1,14 @@
 package HW14.HomeWorks;
 
-public class Task2 extends Thread {
-    final static Object first = new Object();
-    final static Object second = new Object();
+public class Task2 {
+    final static String first = "First";
+    final static String second = "Second";
     static Thread thread1 = new Thread() {
         @Override
         public void run() {
             synchronized (first) {
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     System.out.println(e.getMessage());
                 }
@@ -16,7 +16,6 @@ public class Task2 extends Thread {
                     System.out.println(thread1.getName());
                 }
             }
-
         }
     };
     static Thread thread2 = new Thread() {
@@ -24,15 +23,15 @@ public class Task2 extends Thread {
         public void run() {
             synchronized (second) {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     System.out.println(e.getMessage());
                 }
-            }
-            synchronized (first) {
-                System.out.println(thread2.getName());
-            }
 
+                synchronized (first) {
+                    System.out.println(thread2.getName());
+                }
+            }
         }
     };
 
@@ -40,8 +39,8 @@ public class Task2 extends Thread {
         thread1.start();
         thread2.start();
         try {
-            Thread.sleep(20);
-        }catch (InterruptedException e){
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
         System.out.println(thread1.getName() + thread1.getState());
