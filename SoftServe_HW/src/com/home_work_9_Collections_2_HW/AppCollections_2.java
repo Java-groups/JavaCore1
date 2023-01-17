@@ -11,7 +11,6 @@ public class AppCollections_2
 {
 	public static void main(String[] args) throws IOException
 	{
-		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
 		TreeMap<String, String> personMap = new TreeMap<String, String>();
 		TreeMap<Integer, Student> studentMap = new TreeMap<Integer, Student>();
 
@@ -34,20 +33,24 @@ public class AppCollections_2
 
 		System.out.println(TwoPreFieldSets.IntersectionTwoSets(Set1, Set2));
 
-		CreatePersonsList.createPersonList(br_1, personMap);
+		try(BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in)))
+		{
+			CreatePersonsList.createPersonList(br_1, personMap);
+			CreatePersonsList.removeFieldWithName(personMap, "Orest");
+			CreatePersonsList.showPersonsNames(personMap);
+			Student.fillOutStudentList(br_1, studentMap);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 
-		CreatePersonsList.removeFieldWithName(personMap, "Orest");
-
-		CreatePersonsList.showPersonsNames(personMap);
-
-		Student.fillOutStudentList(br_1, studentMap);
-		
 		Student.printStudents(studentMap);
-		
+
 		Student.printStudentsByName(studentMap);
 
 		Student.printStudentsByCourse(studentMap);
-		
+
 		System.out.println(Student.compareStudents(studentMap.get(0), studentMap.get(1)));
 
 	}

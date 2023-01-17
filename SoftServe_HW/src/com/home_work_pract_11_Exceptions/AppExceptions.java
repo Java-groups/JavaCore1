@@ -18,21 +18,9 @@ public class AppExceptions
 		{
 			squareSides = ExceptClass.enterIntValue(br_1);
 			System.out.println(ExceptClass.squareRectangle(squareSides[0], squareSides[1]));
-			br_1.close();
-		} 
-		catch (ArithmeticException | IOException e) 
-		{
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-		}
 
-
-		String color = "azure".toUpperCase();
-		String type = "mOss".toUpperCase();
-
-		try
-		{
-			
+			String color = "azure".toUpperCase();
+			String type = "mOss".toUpperCase();
 			
 			System.out.println(Color.values()[Color.getColorNumber(color)].getColor()  );
 

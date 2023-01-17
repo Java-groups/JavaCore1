@@ -13,9 +13,15 @@ public class AppCollections_1_pract
 
 		List<Integer> ll = new LinkedList<Integer>();
 
-		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
+		try(BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in)))
+		{
+			CreateCollection_pract.CreateValuesList(ll, br_1);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 
-		CreateCollection_pract.CreateValuesList(ll, br_1);
 		CreateCollection_pract.showCollection(ll);
 
 		ll = CreateCollection_pract.CollectionKeepPositionsMoreThan(ll, 5);
@@ -23,8 +29,6 @@ public class AppCollections_1_pract
 
 		CreateCollection_pract.CollectionKeepValuesLessThan(ll, 20);
 		CreateCollection_pract.showCollection(ll);
-
-		br_1.close();
 
 	}
 }

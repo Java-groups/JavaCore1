@@ -14,11 +14,17 @@ public class AppCollections_1
 		List<Integer> ll_direct = new LinkedList<Integer>();
 		List<Integer> ll_reverse = new LinkedList<Integer>();
 
-		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
 
-		CreateCollection.CreateValuesList(ll, br_1);
+		try(BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in)))
+		{
+			CreateCollection.CreateValuesList(ll, br_1);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+
 		CreateCollection.showCollection(ll);
-
 
 		CreateCollection.addThreeValuesBeforeNeg(ll);
 		CreateCollection.showCollection(ll);
@@ -40,7 +46,6 @@ public class AppCollections_1
 
 		CreateCollection.removeFirstMin(ll);
 		CreateCollection.showCollection(ll);
-		
-		br_1.close();
+
 	}
 }

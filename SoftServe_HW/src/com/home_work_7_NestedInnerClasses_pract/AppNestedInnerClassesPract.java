@@ -10,10 +10,15 @@ public class AppNestedInnerClassesPract
 	public static void main(String[] args) throws IOException
 	{
 		HashMap<Integer, Department> departments_map = new HashMap<Integer, Department>();
-		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
 
-		Department.createDepartmentList(br_1, departments_map);
+		try(BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in)))
+		{
+			Department.createDepartmentList(br_1, departments_map);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 
-		br_1.close();
 	}
 }

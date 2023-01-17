@@ -13,11 +13,8 @@ public class Loops_HW
 	{
 
 		System.out.println("\t\t\t HOME WORK 4 TASK 1");
-
 		Scanner sc = new Scanner(System.in);
-		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
 
-/*
 		EnterMonth.showAmountOfDays(EnterMonth.createMonthDaysList(sc));
 
 		System.out.println("\t\t\t HOME WORK 4 TASK 2");
@@ -38,23 +35,15 @@ public class Loops_HW
 		System.out.println("Please fill out array to get product of all it even values.");
 
 		System.out.println( EnterMonth.getProdOfAllEven(EnterMonth.fillOutValuesArr(sc, 10)));
-*/
 
 		System.out.println("\t\t\t HOME WORK 4 TASK 4");
 		System.out.println("Please, to fill out car list enter year of production and then engine capacity.");
-		try
+		try(BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in)))
 		{
 			Car.createCarInstanceList(br_1, car_map_list);
 			Car.showCarsInfo(car_map_list);
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
 
-		System.out.println("Please, enter car year of production to show cars list by year.");
-		try
-		{
+			System.out.println("Please, enter car year of production to show cars list by year.");
 			Car.showCarsByYear(Car.checkInFormatIntOrExit(br_1), car_map_list);
 			System.out.println("Below sorted cars list by year.");
 			Car.sortByYear(car_map_list);

@@ -10,14 +10,18 @@ public class OOP_1_practice
 	public static void main(String[] args) throws IOException
 	{
 
-	    BufferedReader sc1 = new BufferedReader(new InputStreamReader(System.in));
-
 		HashMap<Integer, Car> car_list = new HashMap<Integer, Car>();
 		HashMap<Integer, Object> line_list = new HashMap<Integer, Object>();
 
-		CreateCarList.createCarList(sc1, car_list);
-		CreateLineList.createLineList(sc1, line_list);
+	    try(BufferedReader sc1 = new BufferedReader(new InputStreamReader(System.in)))
+	    {
+			CreateCarList.createCarList(sc1, car_list);
+			CreateLineList.createLineList(sc1, line_list);
+		}
+	    catch (Exception e)
+	    {
+			e.printStackTrace();
+		}
 
-		sc1.close();
 	}
 }

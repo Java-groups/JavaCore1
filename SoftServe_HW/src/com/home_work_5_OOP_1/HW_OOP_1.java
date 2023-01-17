@@ -9,21 +9,24 @@ public class HW_OOP_1
 {
 	public static void main(String[] args) throws IOException
 	{
-		BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in));
-
 		HashMap<Integer, Object> bird_list = new HashMap<Integer, Object>();
-
-		CreateBirdList.createBirdList(br_1, bird_list);
-
-		Developer dev1 = new Developer(br_1, "Developer", "Junior developer");
 		
+		try(BufferedReader br_1 = new BufferedReader(new InputStreamReader(System.in)))
+		{
+			CreateBirdList.createBirdList(br_1, bird_list);
 
-		System.out.println(dev1.report());
+			Developer dev1 = new Developer(br_1, "Developer", "Junior developer");
+			
 
-		br_1.close(); 
+			System.out.println(dev1.report());
 
-		Object obj = new Object();
-		
+			br_1.close(); 
+
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 
 	}
 }
