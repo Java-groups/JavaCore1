@@ -8,4 +8,8 @@ package arthurmkrtchian.javaCore.HW12.functionalInterfaces.homeWorks.homeWork4;
 
 
 public class Main {
+
+    public static void main(String[] args) {
+
+    }
 }

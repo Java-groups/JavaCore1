@@ -1,29 +1,30 @@
 package helper;
 
+
+import java.io.*;
+import java.util.Arrays;
+
 public class Ex {
 
-    public static void main(String[] args) {
-
-//        Operator operator = Integer::sum;
-//        Operator operator2 = (a,b) -> ((double) (a+b)*2)/3;
-//        Operator operator3 = Integer::rotateRight;
-//
-//        System.out.println(operator.operate(5,6));
-//        System.out.println(operator2.operate(5,6));
-//        System.out.println(operator3.operate(10, 57));
-
-        Operator division = (a,b) -> (double) a/b;
-
-        System.out.println(opernate(21,7,division));
-        System.out.println(opernate(8127, 322, division));
-
+    public static void main(String[] args) throws IOException {
+       write();
     }
 
-    interface Operator{
-        double operate(int a, int b);
+    private static void write() throws IOException{
+        String fileName = "test.txt";
+        //FileOutputStream file = new FileOutputStream(fileName);
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true));
+        String st = "Hello World";
+        bw.write(st);
+        bw.close();
     }
 
-    private static double opernate(int a, int b, Operator operator){
-        return  operator.operate(a, b);
+    private static void read() throws IOException {
+        String filename = "test.txt";
+        FileInputStream file = new FileInputStream(filename);
+        byte[] bt = new byte[10];
+        int available = file.available();
+        int count = file.read(bt,0,available);
+        System.out.println(Arrays.toString(bt));
     }
 }
