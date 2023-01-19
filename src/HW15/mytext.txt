@@ -1,0 +1,4 @@
+Complete next tasks:  
+   1) count and write the number of symbols in every line.
+   2) find the longest and the shortest line. 
+   3) find and write only that lines, which consist of word «var»
