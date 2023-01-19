@@ -8,6 +8,9 @@ public class Main {
         StringService ss = new StringService();
         ss.input();
         System.out.println(ss.longestWord());
+        System.out.println(ss.reverseOrder());
+        System.out.println(ss.replacement());
+        ss.currency();
     }
 
 }
