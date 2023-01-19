@@ -1,6 +1,7 @@
 package HW12.task1;
 
 public class Cipher {
+	
 	/**
 	 * Create two methods String encrypt(String s, int n) and String decrypt(Stirng s, int n)
 	 * Method encrypt should take a string and return coded string where every letter is moved
@@ -9,7 +10,7 @@ public class Cipher {
 	 */
 	
 	public static void main(String[] args) {
-		String message = "Hello Java World XYZ";
+		String message = "This settence is to show encrypt and decrypt methods!";
 		System.out.println(encrypt(message, 3));
 
 		System.out.println(decrypt(encrypt(message, 3), 3));
@@ -19,7 +20,7 @@ public class Cipher {
 		StringBuilder sb = new StringBuilder();
 		for (char c : s.toCharArray()) {
 			if (c != ' ') {
-				sb.append((char) ((c + n - 'a') % 26 + 'a'));
+				sb.append((char) (c + n));
 			} else {
 				sb.append(c);
 			}
@@ -31,7 +32,7 @@ public class Cipher {
 		StringBuilder sb = new StringBuilder();
 		for (char c : s.toCharArray()) {
 			if (c != ' ') {
-				sb.append((char) ((c - n - 'a') % 26 + 'a'));
+				sb.append((char) (c - n));
 			} else {
 				sb.append(c);
 			}
