@@ -1,5 +1,7 @@
 package hw9.task2;
 
+import java.util.Collection;
+import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,5 +27,16 @@ public class Main {
             personsWithUniqueName.put(entry.getValue(), entry.getKey());
         }
         System.out.println(personsWithUniqueName);
+
+        Collection<String> names = personMap.values();
+        try {
+            for (String name : names) {
+                if (name.startsWith("K")) {
+                    names.remove(name);
+                }
+            }
+        } catch (ConcurrentModificationException e) {
+            System.out.println("Tried to remove element from collection while iterating");
+        }
     }
 }

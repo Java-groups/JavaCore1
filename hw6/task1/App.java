@@ -12,5 +12,13 @@ public class App {
         };
         Arrays.sort(employees);
         System.out.println(Arrays.toString(employees));
+
+        try {
+            System.out.println("Trying to cast SalariedEmployee to ContractEmployee...");
+            ContractEmployee employee = (ContractEmployee) employees[0];
+        } catch (ClassCastException e) {
+            System.out.println("Error: can't cast SalariedEmployee to ContractEmployee!");
+        }
+
     }
 }
