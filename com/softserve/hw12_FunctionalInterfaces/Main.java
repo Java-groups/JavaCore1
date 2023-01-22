@@ -12,5 +12,8 @@ public class Main {
 
         DateValidation dt = new DateValidation();
         dt.dateValidation();
+
+        LeapYear lp = new LeapYear();
+        lp.leapYear(1994);
     }
 }
