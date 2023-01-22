@@ -7,11 +7,11 @@ package arthurmkrtchian.javaCore.HW11.exceptions.practicalTasks.practicalTask2;
 //        Check to work your exceptions.
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Color.ColorException, Type.TypeException {
         print(fillArray());
     }
 
-    private static Plant[] fillArray() {
+    private static Plant[] fillArray() throws Type.TypeException, Color.ColorException {
 
         return new Plant[]{
                 new Plant(20, "Red", "Tree"),

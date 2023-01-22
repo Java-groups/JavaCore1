@@ -50,7 +50,7 @@ public class Plant {
         this.type = Type.valueOf(type.toUpperCase());
     }
 
-    public Plant(int size, String color, String type) {
+    public Plant(int size, String color, String type) throws Color.ColorException, Type.TypeException {
         this.size = size;
         if (Color.isExists(color) && Type.isExists(type)) {
             setColor(color);

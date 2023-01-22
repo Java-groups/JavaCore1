@@ -12,8 +12,7 @@ public enum Color {
         throw new ColorException("The enum doesn`t contain such color.");
     }
 
-
-    private static class ColorException extends IOException {
+    static class ColorException extends IOException {
         public ColorException(String s) {
             super("Color exception: " + s);
         }

@@ -16,7 +16,7 @@ public enum Type {
     }
 
 
-    private static class TypeException extends IOException {
+    static class TypeException extends IOException {
         public TypeException(String s) {
             super("Type exception: " + s);
         }
