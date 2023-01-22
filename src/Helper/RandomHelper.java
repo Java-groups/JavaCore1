@@ -29,4 +29,8 @@ public class RandomHelper {
             return (int) ((Math.random() * (max - min) + min) * -1);
         }
     }
+
+    public static int positiveIntegerMinMax(int min, int max) {
+        return (int) (Math.random() * (max - min) + min);
+    }
 }
