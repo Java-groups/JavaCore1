@@ -2,9 +2,17 @@ package org.example;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.MessageEntity;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ForceReplyKeyboard;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.time.*;
@@ -33,6 +41,9 @@ public class Bot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            else if (update.hasCallbackQuery()) {
+
+            }
         }
     }
 
@@ -40,10 +51,26 @@ public class Bot extends TelegramLongPollingBot {
         if (message.hasText()) {
             Optional<MessageEntity> command = message.getEntities().stream().filter(e -> "bot_command".equals(e.getType())).findFirst();
             if (command.isPresent()) {
+                SendMessage sendMessage = new SendMessage();
+                sendMessage.setChatId(message.getChatId().toString());
+                sendMessage.setText(message.getText());
+                ReplyKeyboardMarkup replyKeyboard = new ReplyKeyboardMarkup();
+                List<KeyboardRow> keyboardButtons = new ArrayList<>();
+                KeyboardRow row = new KeyboardRow();
+                row.add("/start");
+                row.add("/tracker");
+                keyboardButtons.add(row);
+                row = new KeyboardRow();
+                row.add("/schedule");
+                row.add("/pomodoro");
+                keyboardButtons.add(row);
+                replyKeyboard.setKeyboard(keyboardButtons);
+                sendMessage.setReplyMarkup(replyKeyboard);
+
                 if (message.getText().equals("/start")) {
-                    SendMessage sendMessage = new SendMessage();
-                    sendMessage.setChatId(message.getChatId().toString());
-                    sendMessage.setText("Hello! \n " +
+                    SendMessage messageStart = new SendMessage();
+                    messageStart.setChatId(message.getChatId().toString());
+                    messageStart.setText("Hello! \n " +
                             "My name is EveryDayBot \n");
                     execute(sendMessage);
                 } else if (message.getText().equals("/tracker")) {
@@ -56,6 +83,7 @@ public class Bot extends TelegramLongPollingBot {
                     someMap.put(DayOfWeek.FRIDAY, "00-04,09-13,19-22");
                     someMap.put(DayOfWeek.SATURDAY, "03-07,14-16,23-02");
                     someMap.put(DayOfWeek.SUNDAY, "00-01,06-10,16-19");
+
                     if(tester(someMap,time)){
                         execute(SendMessage
                                 .builder()
@@ -71,14 +99,34 @@ public class Bot extends TelegramLongPollingBot {
                     }
 
                 }
+                else if (message.getText().equals("/schedule")) {
+                    if(message.hasText()) {
+                        Map<DayOfWeek, String> someMap = new HashMap<>();
+                        someMap.put(DayOfWeek.MONDAY, "06-10,15-19,21-23");
+                        someMap.put(DayOfWeek.TUESDAY, "00-04,09-13,18-22");
+                        someMap.put(DayOfWeek.WEDNESDAY, "03-07,12-16,21-00");
+                        someMap.put(DayOfWeek.THURSDAY, "00-01,06-10,15-19");
+                        someMap.put(DayOfWeek.FRIDAY, "00-04,09-13,19-22");
+                        someMap.put(DayOfWeek.SATURDAY, "03-07,14-16,23-02");
+                        someMap.put(DayOfWeek.SUNDAY, "00-01,06-10,16-19");
+                        ArrayList<DayOfWeek> days = new ArrayList<>();
+                        execute(SendMessage.builder()
+                                .chatId(message.getChatId()).text("Виберіть день : ")
+                                .text(schedule(someMap))
+                                .build());
+                        for (Map.Entry<DayOfWeek, String> day : someMap.entrySet()) {
+
+                        }
+                    }
             }
-        } else if (message.getText().equals("/pomodoro")) {
-            String value = message.getText();
-            if (value != null) {
+                else if (message.getText().equals("/pomodoro")) {
+                    String value = message.getText();
+                    if (value != null) {
+                    }
+
+                }
 
             }
-        } else if (message.getText().equals("/schedule")) {
-
         }
     }
     private boolean tester(Map<DayOfWeek, String> someMap,LocalDateTime time) {
@@ -116,5 +164,21 @@ public class Bot extends TelegramLongPollingBot {
             }
         }
         return false;
+    }
+    private String schedule(Map<DayOfWeek, String> someMap){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setText("Виберіть день : ");
+        sendMessage.setChatId(sendMessage.getChatId().toString());
+        InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+        List<InlineKeyboardButton> rowInline = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        ArrayList<String> list = new ArrayList<>();
+        ArrayList<DayOfWeek> days = new ArrayList<>();
+        for (Map.Entry<DayOfWeek,String> m : someMap.entrySet()) {
+             button.setText(String.valueOf(m.getKey()));
+        }
+
+        return null;
     }
 }
