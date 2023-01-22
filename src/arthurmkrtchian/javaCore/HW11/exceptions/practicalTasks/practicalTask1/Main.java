@@ -22,16 +22,16 @@ public class Main {
         System.out.printf("Rectangle area is = %d\n", squareRectangle(a,b));
     }
 
-    static int read() throws IOException {
+    static int read()  {
         int result;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while (true) {
-             line = reader.readLine();
             try {
+                line = reader.readLine();
                 result = Integer.parseInt(line);
                 break;
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException | IOException e) {
                 System.out.println("You should enter an integer.");
                 System.out.print("Try again: ");
             }

@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
+
 
 public class Main {
 
@@ -17,25 +17,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Please enter year (for example: 2023) to check if that year is leap");
         try {
-            if (isLeap(reader.readLine())){
+            LocalDate d = LocalDate.of(Integer.parseInt(reader.readLine()), 1,1);
+            if (d.isLeapYear()){
                 System.out.println("Yes, the year is leap");
             } else{
                 System.out.println("No, the year is not leap");
             }
         } catch (IOException e){
             e.printStackTrace();
-        }
-    }
-
-    private static boolean isLeap(String year){
-        while(true) {
-            try {
-                LocalDate d = LocalDate.of(Integer.parseInt(year), 1,1);
-                return d.isLeapYear();
-            } catch (DateTimeParseException e) {
-                e.printStackTrace();
-                System.err.println("Invalid input. Please try again.");
-            }
+            System.err.println("Invalid input. Please try again.");
         }
     }
 }

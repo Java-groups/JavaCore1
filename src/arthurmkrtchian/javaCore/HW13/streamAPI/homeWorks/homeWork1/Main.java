@@ -12,6 +12,7 @@ package arthurmkrtchian.javaCore.HW13.streamAPI.homeWorks.homeWork1;
 
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -24,6 +25,7 @@ public class Main {
         System.out.println("Initial list:");
         initialList.forEach(System.out::println);
 
+
         System.out.println("\nPhones over $3000:");
         initialList.stream().filter(x->x.getCategory() == Category.PHONE).filter(x->x.getPrice()>3000).forEach(System.out::println);
     }
@@ -33,24 +35,12 @@ public class Main {
 
         List<Product> result = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            result.add(new Product(Category.randomCategory(), LocalDate.of(getYear(), getMonth(), getDay()), getPrice()));
+            result.add(new Product(Category.randomCategory(), randomDate(), random.nextInt(5000)));
         }
         return result;
     }
 
-    static private int getYear() {
-        return random.nextInt(123) + 1900;
-    }
-
-    static private int getMonth() {
-        return random.nextInt(11) + 1;
-    }
-
-    static private int getDay() {
-        return random.nextInt(27) + 1;
-    }
-
-    static private int getPrice() {
-        return random.nextInt(5000);
+    public static LocalDate randomDate() {
+        return LocalDate.now().minus(Period.ofDays((new Random().nextInt(365 * 30))));
     }
 }
