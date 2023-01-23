@@ -20,9 +20,14 @@ public class Test {
                     System.out.println("1 dollar costs 40 hryvnias");
                     System.out.println("Enter amount of dollars:");
                     double dollars = Integer.parseInt(br.readLine());
-                    double hryvnias = dollars*40;
+                    double hryvnias = dollars * 40;
                     System.out.println("It is " + hryvnias + " hryvnias");
                     while (option != 3) ;
+                case 5:
+                    String temp = parseInt(br.readLine());
+                    String temp  = text.replaceAll("\\s+", "").toLowerCase();
+                    return temp === IntStream.range(0, temp.length() / 2)
+                            .noneMatch(i -> temp.charAt(i) != temp.charAt(temp.length() - i - 1));
 
             }
         } while (option != 15);
