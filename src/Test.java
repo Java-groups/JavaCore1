@@ -16,7 +16,7 @@ public class Test {
 
 
                 case 2:
-                case 5:
+                case 3:
                     System.out.println("1 dollar costs 40 hryvnias");
                     System.out.println("Enter amount of dollars:");
                     double dollars = Integer.parseInt(br.readLine());
