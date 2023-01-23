@@ -23,6 +23,21 @@ public class Test {
                     double hryvnias = dollars * 40;
                     System.out.println("It is " + hryvnias + " hryvnias");
                     while (option != 3) ;
+                case 4:
+                    System.out.println("\nInput string: ");
+                    String s = br.readLine();
+                    String loudLetters = "aeiouy";
+                    AtomicInteger count = new AtomicInteger();
+                    Arrays.stream(s
+                                    .split(""))
+                            .forEach(letter -> {
+                                if(loudLetters.contains(letter)){
+                                    count.getAndIncrement();
+                                }
+                            });
+                    System.out.println(count);
+
+                    break;
                 case 5:
                     String temp = parseInt(br.readLine());
                     String temp  = text.replaceAll("\\s+", "").toLowerCase();
