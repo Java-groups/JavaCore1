@@ -10,8 +10,9 @@ public class HomeWork14 {
             do {
                 System.out.println();
                 System.out.println("Please, put the number of task:");
-                System.out.println("1. About String");
- //               System.out.println("2. About collection of numbers");
+                System.out.println("1. 3 pigs in a thread");
+                System.out.println("2. 2 sheep on a bridge");
+                System.out.println("3. Pinball");
 
                 try {
                     x = Integer.parseInt(br.readLine());
@@ -21,7 +22,8 @@ public class HomeWork14 {
 
                 switch (x) {
                     case 1 -> Task1.doTask(br);
-  //                  case 2 -> Task2.doTask(br);
+                    case 2 -> Task2.doTask(br);
+                    case 3 -> Task3.doTask(br);
 
                     case 0 -> {
                     }
