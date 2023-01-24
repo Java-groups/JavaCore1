@@ -1,0 +1,3 @@
+There is 4 lines in file1.txt
+The longest line is: dsads daf saf as faf asdsdadsfasdaf as
+My name - Stepan Bilashuk, my birthday date - 01/10/2002
