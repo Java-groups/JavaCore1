@@ -1,4 +1,4 @@
-package PrecticalTask13_Stream_API;
+package PracticalTask13_Stream_API;
 
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
