@@ -24,7 +24,6 @@ import AllHomeWorks.HomeWork9.HomeWork9;
 import AllHomeWorks.HomeWork9Practical.HomeWork9Practical;
 import AllHomeWorks.Homework4.Homework4;
 import AllHomeWorks.Homework4Practical.Homework4Practical;
-import AllHomeWorks.ProjectFruits.ProjectFruits;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -96,8 +95,6 @@ public class AllHomeWorks {
                     case 23 -> HomeWork12.doSelectTask(br);
                     case 24 -> HomeWork13Practical.doSelectTask(br);
                     case 25 -> HomeWork13.doSelectTask(br);
-
-                    case 100 -> ProjectFruits.doTask(br);
 
 
 
