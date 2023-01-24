@@ -66,6 +66,19 @@ public class Account implements Serializable {
                 '}';
     }
 
+    public static void createAccount(String userName, List<Account> list, String password, String emailAddress) {
+        for (int i = 0; i < list.size(); i++) {
+            if (userName.equals(list.get(i).getUserName())) {
+                System.out.println("Account with this name already exist");
+                break;
+            } else if (!userName.equals(list.get(i).getUserName()) && (i == list.size() - 1)) {
+                System.out.println("Hi, " + userName + " welcome to our banking system!");
+                list.add(new Account(emailAddress,userName,password));
+                break;
+            }
+        }
+    }
+
     public void transfer(double amount, String userName, String emailAddress, List<Account> list) {
         if (this.balance >= amount) {
             this.balance -= amount;
