@@ -2,7 +2,8 @@ package com.softserve.project;
 
 import java.util.Scanner;
 
-public class Player2 extends AbstractPlayer {
+public class Player2 extends AbstractPlayer
+{
 
     public Player2(int price) {
         super(price);
@@ -15,7 +16,7 @@ public class Player2 extends AbstractPlayer {
     @Override
     public void playSong() {
         if (getSong() != null) {
-            System.out.println("Error");
+            System.out.println("Error, song not found!");
             System.out.println();
         }
     }
